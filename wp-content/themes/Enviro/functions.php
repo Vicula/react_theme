@@ -4,6 +4,97 @@
  *
  * @since Enviro 1.0
  */
+
+/**
+ *
+ * TAKE GLOBAL DESCRIPTION OUT OF HEADER.PHP AND GENERATE IT FROM A FUNCTION
+ *
+ */
+function site_global_description()
+{
+	global $page, $paged;
+	wp_title( '|', true, 'right' );
+	bloginfo( 'name' );
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+	{
+		echo " | $site_description";
+	}
+}
+
+
+/**
+ * REMOVE UNWANTED CAPITAL <P> TAGS
+ */
+remove_filter( 'the_content', 'capital_P_dangit' );
+remove_filter( 'the_title', 'capital_P_dangit' );
+remove_filter( 'comment_text', 'capital_P_dangit' );
+
+
+/**
+ * REGISTER NAV MENUS FOR HEADER FOOTER AND UTILITY
+ */
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'themename' ),
+	'footer' => __( 'Footer Menu', 'themename' ),
+	'utility' => __( 'Utility Menu', 'themename' )
+) );
+
+
+/**
+ * DEFAULT COMMENTS & RSS LINKS IN HEAD
+ */
+add_theme_support( 'automatic-feed-links' );
+
+
+/**
+ * THEME SUPPORTS THUMBNAILS
+ */
+add_theme_support( 'post-thumbnails' );
+
+
+/**
+ *	ADD TINY IMAGE SIZE FOR ACF FIELDS, BETTER USABILITY
+ */
+add_image_size( 'mini-thumbnail', 50, 50 );
+
+
+// custom post type
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+
+	$args1 = array(
+		'labels' => array(
+			'name' => __( 'Retailers' ),
+			'singular_name' => __( 'Retailer' )
+		),
+		'public' => true,
+		'exclude_from_search' => true,
+		'menu_icon' => 'dashicons-screenoptions',
+		'publicly_queryable'  => false,
+		'rewrite' => array('with_front' => false, 'slug' => 'retailers'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+  	register_post_type( 'Retailers', $args1);
+  	register_taxonomy_for_object_type('category', 'post_type');
+  	$args2 = array(
+		'labels' => array(
+			'name' => __( 'Press' ),
+			'singular_name' => __( 'Press' )
+		),
+		'public' => true,
+		'exclude_from_search' => true,
+		'menu_icon' => 'dashicons-screenoptions',
+		'publicly_queryable'  => false,
+		'rewrite' => array('with_front' => false, 'slug' => 'press'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+  	register_post_type( 'Press', $args2);
+
+  	flush_rewrite_rules();
+}
+
 function enviro_scripts() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'enviro-style-dist', get_stylesheet_directory_uri() . '/dist/style.css');
