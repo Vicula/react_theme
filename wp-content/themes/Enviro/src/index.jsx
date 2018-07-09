@@ -20,10 +20,10 @@ const App = () => (
         <Header />
         <div id="content">
             <Switch>
-                <Route exact path={EnvrioSettings.path} component={Posts} />
-                <Route exact path={EnvrioSettings.path + 'posts/:slug'} component={Post} />
-                <Route exact path={EnvrioSettings.path + 'products'} component={Products} />
-                <Route exact path={EnvrioSettings.path + 'products/:product'} component={Product} />
+                <Route exact path={EnviroSettings.path} component={Posts} />
+                <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
+                <Route exact path={EnviroSettings.path + 'products'} component={Products} />
+                <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
                 <Route path="*" component={NotFound} />
             </Switch>
         </div>
