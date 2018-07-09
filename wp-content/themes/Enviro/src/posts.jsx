@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PostList from './post-list';
-import LoadingIcon from './loading-icon.gif';
-import Placeholder from './placeholder.jpg';
+import LoadingIcon from '../dist/images/loading-icon.gif';
+import Placeholder from '../dist/images/placeholder.jpg';
 
 class Posts extends React.Component {
 
