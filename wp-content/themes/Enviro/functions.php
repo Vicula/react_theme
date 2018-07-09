@@ -20,7 +20,7 @@ function enviro_scripts() {
 		'title' => get_bloginfo( 'name', 'display' ),
 		'path' => $path,
 		'URL' => array(
-			'api' => esc_url_raw( get_rest_url( null, '/wp-json/wp/v2' ) ),
+			'api' => esc_url_raw( get_rest_url( null, '/wp/v2' ) ),
 			'root' => esc_url_raw( $url ),
 		),
 		'woo' => array(
