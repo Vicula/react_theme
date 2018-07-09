@@ -22,10 +22,10 @@
         <div id="page" class="hfeed site">
             <div id="content">
                 <div class="loader-gif">
-                    <img src="<?php echo home_url() ?>/wp-content/themes/enviro/dist/images/loading-icon.gif" alt="Loader">
+                    <img src="<?php echo home_url() ?>/wp-content/themes/Enviro/dist/images/loading-icon.gif" alt="Loader">
                 </div>
             </div>
             <?php wp_footer(); ?>
-        </div>			
+        </div>
     </body>
 </html>
