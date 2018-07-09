@@ -23,7 +23,7 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
-                    'file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://localhost/enviro/wp-content/themes/enviro/dist/images',
+                    'file-loader?name=[name].[ext]&outputPath=images/&publicPath=http://newcobblehill.wpengine.com/wp-content/themes/Enviro/dist/images/',
                     'image-webpack-loader'
                 ]
             },

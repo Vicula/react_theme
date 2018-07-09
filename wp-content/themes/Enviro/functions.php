@@ -12,15 +12,15 @@ function enviro_scripts() {
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', '20171006', false );
 	wp_enqueue_script( 'scrollmagic', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js' , array( 'jquery' ), '1.0', false );
 	wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js', array( 'jquery' ), '20171006', false );
-	
+
     wp_enqueue_script( 'enviro-script', get_stylesheet_directory_uri() . '/dist/app.js' , array(), '1.0', true );
-	$url = trailingslashit( home_url() );
+	$url = trailingslashit( home_url('/') );
 	$path = trailingslashit( parse_url( $url, PHP_URL_PATH ) );
 	wp_scripts()->add_data( 'enviro-script', 'data', sprintf( 'var EnviroSettings = %s;', wp_json_encode( array(
 		'title' => get_bloginfo( 'name', 'display' ),
 		'path' => $path,
 		'URL' => array(
-			'api' => esc_url_raw( get_rest_url( null, '/wp/v2' ) ),
+			'api' => esc_url_raw( get_rest_url( null, '/wp-json/wp/v2' ) ),
 			'root' => esc_url_raw( $url ),
 		),
 		'woo' => array(
