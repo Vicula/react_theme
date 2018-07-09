@@ -967,9 +967,52 @@ module.exports = "http://localhost/enviro/wp-content/themes/enviro/dist/images/p
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
 
 
+
+const NotFound = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { id: 'content' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container post-entry' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'card' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'card-body' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h4',
+                    { className: 'card-title' },
+                    '404 Page Not Found!'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    { className: 'card-text' },
+                    'The page you requested does not exist.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'p',
+                    { className: 'card-text' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                        { to: CelestialSettings.path },
+                        'Return to homepage'
+                    )
+                )
+            )
+        )
+    )
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (NotFound);
 
 /***/ }),
 /* 16 */
@@ -2497,7 +2540,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__products__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__product__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__not_found___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__not_found__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__loading_icon_gif__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__placeholder_jpg__ = __webpack_require__(14);
@@ -2533,7 +2575,7 @@ const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnvrioSettings.path + 'posts/:slug', component: __WEBPACK_IMPORTED_MODULE_6__post__["a" /* default */] }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnvrioSettings.path + 'products', component: __WEBPACK_IMPORTED_MODULE_7__products__["a" /* default */] }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnvrioSettings.path + 'products/:product', component: __WEBPACK_IMPORTED_MODULE_8__product__["a" /* default */] }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_9__not_found___default.a })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_9__not_found__["a" /* default */] })
         )
     ),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__footer__["a" /* default */], null)
@@ -24764,7 +24806,6 @@ class Posts extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder_jpg__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__placeholder_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__not_found__);
 // External dependencies
 
 
@@ -24825,7 +24866,7 @@ class PostList extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 
     renderEmpty() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__not_found___default.a, null);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__not_found__["a" /* default */], null);
     }
 
     render() {
@@ -24851,7 +24892,6 @@ class PostList extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__not_found___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__not_found__);
 
 
 
@@ -24909,7 +24949,7 @@ class Post extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 
     renderEmpty() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__not_found___default.a, null);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__not_found__["a" /* default */], null);
     }
 
     render() {
@@ -25125,7 +25165,6 @@ class Products extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__not_found___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__not_found__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(5);
 
 
@@ -25213,7 +25252,7 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 
     renderEmpty() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__not_found___default.a, null);
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__not_found__["a" /* default */], null);
     }
 
     render() {
