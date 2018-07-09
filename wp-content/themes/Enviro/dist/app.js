@@ -960,12 +960,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-module.exports = "http://localhost/enviro/wp-content/themes/enviro/dist/images/placeholder.jpg";
-
-/***/ }),
+/* 14 */,
 /* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1428,12 +1423,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = "http://localhost/enviro/wp-content/themes/enviro/dist/images/loading-icon.gif";
-
-/***/ }),
+/* 22 */,
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2540,10 +2530,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__products__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__product__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__loading_icon_gif__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__loading_icon_gif__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__placeholder_jpg__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__placeholder_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dist_images_loading_icon_gif__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__dist_images_loading_icon_gif__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dist_images_placeholder_jpg__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__dist_images_placeholder_jpg__);
 
 
 
@@ -24803,8 +24793,8 @@ class Posts extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder_jpg__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__placeholder_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
 // External dependencies
 
@@ -24828,7 +24818,7 @@ class PostList extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
                             { to: 'posts/' + post.slug },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'card-img-top', src: post.featured_image_src ? post.featured_image_src : __WEBPACK_IMPORTED_MODULE_2__placeholder_jpg___default.a, alt: 'Featured Image' })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'card-img-top', src: post.featured_image_src ? post.featured_image_src : __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a, alt: 'Featured Image' })
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
