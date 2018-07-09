@@ -19,11 +19,7 @@ module.exports = {
                     publicPath: 'dist'
                 })
             },
-            {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                use: 'babel-loader'
-            },
+
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
@@ -38,6 +34,18 @@ module.exports = {
             {
                 test: /\.(ttf|eot)$/,
                 loader: 'file-loader?name=fonts/[name].[ext]'
+            },
+            {
+              test: /\.jsx?$/,
+              exclude: /node_modules/,
+              use: [
+                {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['react']
+                  }
+                }
+              ],
             }
         ]
     },
