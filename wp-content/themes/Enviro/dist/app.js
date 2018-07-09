@@ -24605,8 +24605,8 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
                 { className: 'site-title' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { to: CelestialSettings.path },
-                    'Celestial'
+                    { to: EnviroSettings.path },
+                    'Enviro'
                 )
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -24622,7 +24622,7 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
                     { className: 'navbar-nav' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { className: 'nav-item nav-link active', to: CelestialSettings.path },
+                        { className: 'nav-item nav-link active', to: EnviroSettings.path },
                         'Home ',
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
@@ -24632,7 +24632,7 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { className: 'nav-item nav-link', to: CelestialSettings.path + "products/" },
+                        { className: 'nav-item nav-link', to: EnviroSettings.path + "products/" },
                         'Products'
                     )
                 )
@@ -24658,7 +24658,7 @@ const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "card-footer bg-transparent border-primary" },
-        "Celestial Theme 2017"
+        "Enviro Theme 2018"
     )
 );
 
