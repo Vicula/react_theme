@@ -24777,8 +24777,7 @@ class Posts extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     'Posts'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__post_list__["a" /* default */], { posts: this.state.posts })
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_3__dist_images_loading_icon_gif___default.a, alt: 'loader gif', id: 'loader' })
+            )
         );
     }
 }
