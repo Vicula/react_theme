@@ -24727,7 +24727,7 @@ class Posts extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
         this.setState({ page: this.state.page + 1 });
 
-        fetch(CelestialSettings.URL.api + "/posts/?page=" + this.state.page).then(function (response) {
+        fetch(EnviroSettings.URL.api + "/posts/?page=" + this.state.page).then(function (response) {
             for (var pair of response.headers.entries()) {
 
                 // getting the total number of pages
@@ -24909,7 +24909,7 @@ class Post extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         var url = window.location.href.split('/');
         var slug = url.pop() || url.pop();
 
-        fetch(CelestialSettings.URL.api + "/posts?slug=" + slug).then(function (response) {
+        fetch(EnviroSettings.URL.api + "/posts?slug=" + slug).then(function (response) {
             if (!response.ok) {
                 throw Error(response.statusText);
             }
@@ -25021,7 +25021,7 @@ class Products extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
         this.setState({ page: this.state.page + 1 });
 
-        fetch(CelestialSettings.woo.url + "products?page=" + this.state.page + "&consumer_key=" + CelestialSettings.woo.consumer_key + "&consumer_secret=" + CelestialSettings.woo.consumer_secret).then(function (response) {
+        fetch(EnviroSettings.woo.url + "products?page=" + this.state.page + "&consumer_key=" + EnviroSettings.woo.consumer_key + "&consumer_secret=" + EnviroSettings.woo.consumer_secret).then(function (response) {
             for (var pair of response.headers.entries()) {
 
                 // getting the total number of pages
@@ -25136,7 +25136,7 @@ class Products extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     { className: 'card-text' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { to: CelestialSettings.path },
+                        { to: EnviroSettings.path },
                         'Return to homepage'
                     )
                 )
@@ -25184,7 +25184,7 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         var url = window.location.href.split('/');
         var slug = url.pop() || url.pop();
 
-        fetch(CelestialSettings.woo.url + "products?slug=" + slug + "&consumer_key=" + CelestialSettings.woo.consumer_key + "&consumer_secret=" + CelestialSettings.woo.consumer_secret).then(function (response) {
+        fetch(EnviroSettings.woo.url + "products?slug=" + slug + "&consumer_key=" + EnviroSettings.woo.consumer_key + "&consumer_secret=" + EnviroSettings.woo.consumer_secret).then(function (response) {
             if (!response.ok) {
                 throw Error(response.statusText);
             }

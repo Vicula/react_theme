@@ -16,7 +16,7 @@ class Product extends React.Component {
         var url = window.location.href.split('/');
         var slug = url.pop() || url.pop();
 
-        fetch(CelestialSettings.woo.url + "products?slug=" + slug + "&consumer_key=" + CelestialSettings.woo.consumer_key + "&consumer_secret=" + CelestialSettings.woo.consumer_secret)
+        fetch(EnviroSettings.woo.url + "products?slug=" + slug + "&consumer_key=" + EnviroSettings.woo.consumer_key + "&consumer_secret=" + EnviroSettings.woo.consumer_secret)
             .then(function (response) {
                 if (!response.ok) {
                     throw Error(response.statusText);

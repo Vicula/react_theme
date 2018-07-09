@@ -47,7 +47,7 @@ class Products extends React.Component {
 
         this.setState({ page: this.state.page + 1 });
 
-        fetch(CelestialSettings.woo.url + "products?page=" + this.state.page + "&consumer_key=" + CelestialSettings.woo.consumer_key + "&consumer_secret=" + CelestialSettings.woo.consumer_secret)
+        fetch(EnviroSettings.woo.url + "products?page=" + this.state.page + "&consumer_key=" + EnviroSettings.woo.consumer_key + "&consumer_secret=" + EnviroSettings.woo.consumer_secret)
             .then(function (response) {
                 for (var pair of response.headers.entries()) {
 
@@ -123,7 +123,7 @@ class Products extends React.Component {
                 <div className="card-body">
                     <h4 className="card-title">404 Page Not Found!</h4>
                     <p className="card-text">The page you requested does not exist.</p>
-                    <p className="card-text"><Link to={CelestialSettings.path}>Return to homepage</Link></p>
+                    <p className="card-text"><Link to={EnviroSettings.path}>Return to homepage</Link></p>
                 </div>
             </div>
         );
