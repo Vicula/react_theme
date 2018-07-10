@@ -24627,34 +24627,6 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
                 __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
                 { to: EnviroSettings.path },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-shopping-cart', 'aria-hidden': 'true' })
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'button',
-                { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarNavAltMarkup', 'aria-controls': 'navbarNavAltMarkup', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'navbar-toggler-icon' })
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'collapse navbar-collapse', id: 'navbarNavAltMarkup' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'navbar-nav' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { className: 'nav-item nav-link active', to: EnviroSettings.path },
-                        'Home ',
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'span',
-                            { className: 'sr-only' },
-                            '(current)'
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { className: 'nav-item nav-link', to: EnviroSettings.path + "products/" },
-                        'Products'
-                    )
-                )
             )
         )
     )

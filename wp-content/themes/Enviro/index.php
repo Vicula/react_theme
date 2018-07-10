@@ -16,6 +16,10 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <title>Enviro</title>
+        <!-- TYPEKIT -->
+        <script src="https://use.typekit.net/gsj1tlx.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <!-- END TYPEKIT -->
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
