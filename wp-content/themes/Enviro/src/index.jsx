@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './header';
+import Home from './views/home/home';
 import Footer from './footer';
 import Posts from './posts';
 import Post from './post';
@@ -20,7 +21,8 @@ const App = () => (
         <Header />
         <div id="content">
             <Switch>
-                <Route exact path={EnviroSettings.path} component={Posts} />
+                <Route exact path={EnviroSettings.path} component={Home} />
+                <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
                 <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
                 <Route exact path={EnviroSettings.path + 'products'} component={Products} />
                 <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />

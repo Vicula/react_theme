@@ -1,7 +1,7 @@
 // External dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Placeholder from '../dist/images/placeholder.jpg';
+import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from './not-found';
 
 class PostList extends React.Component {
