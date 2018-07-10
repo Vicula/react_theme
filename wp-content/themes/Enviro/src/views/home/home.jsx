@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LoadingIcon from '../../../dist/images/loading-icon.gif';
 import HomeHeader from './home-header';
+import LongCTA from './home-longCTA';
 
 class Home extends React.Component {
 
@@ -43,7 +44,7 @@ class Home extends React.Component {
 
                 </div>
 
-            
+
         );
     }
 }

@@ -2560,9 +2560,41 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+var pages;
+
 // Load the Sass file
 __webpack_require__(79);
-
+function getThosePages() {
+    var that = this;
+    var totalPages;
+    fetch(EnviroSettings.URL.api + "/pages/").then(function (response) {
+        // for (var pair of response.headers.entries()) {
+        //
+        //     // getting the total number of pages
+        //     if (pair[0] == 'x-wp-totalpages') {
+        //         totalPages = pair[1];
+        //     }
+        //
+        //     if (that.state.page >= totalPages) {
+        //         that.setState({ getPosts: false })
+        //     }
+        // }
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response.json();
+    }).then(function (results) {
+        var allPages;
+        results.forEach(function (single) {
+            allPages.push(single);
+        });
+        pages = allPages;
+    }).catch(function (error) {
+        console.log('There has been a problem with your fetch operation: ' + error.message);
+    });
+}
+getThosePages();
+console.log(pages);
 const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { id: 'page-inner' },
@@ -25273,6 +25305,9 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_loading_icon_gif__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_header__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_longCTA__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_longCTA___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__);
+
 
 
 
@@ -25405,6 +25440,53 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (HomeHeader);
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
+// External dependencies
+
+
+
+
+
+class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'section',
+            { className: 'ctaLong', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'arrowTab' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'span',
+                    null,
+                    '\u22C6'
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'content' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                    { className: 'btn', to: '' },
+                    'Learn more'
+                )
+            )
+        );
+    }
+}
+
+/* unused harmony default export */ var _unused_webpack_default_export = (LongCTA);
 
 /***/ })
 /******/ ]);

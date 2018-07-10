@@ -13,9 +13,44 @@ import NotFound from './not-found';
 import LoadingIcon from '../dist/images/loading-icon.gif';
 import Placeholder from '../dist/images/placeholder.jpg';
 
+var pages;
+
 // Load the Sass file
 require('./style.scss');
+function getThosePages(){
+  var that = this;
+  var totalPages;
+  fetch(EnviroSettings.URL.api + "/pages/")
+      .then(function (response) {
+          // for (var pair of response.headers.entries()) {
+          //
+          //     // getting the total number of pages
+          //     if (pair[0] == 'x-wp-totalpages') {
+          //         totalPages = pair[1];
+          //     }
+          //
+          //     if (that.state.page >= totalPages) {
+          //         that.setState({ getPosts: false })
+          //     }
+          // }
+          if (!response.ok) {
+              throw Error(response.statusText);
+          }
+          return response.json();
+      })
+      .then(function (results) {
+          var allPages;
+          results.forEach(function (single) {
+              allPages.push(single);
+          })
+          pages = allPages;
 
+      }).catch(function (error) {
+          console.log('There has been a problem with your fetch operation: ' + error.message);
+      });
+}
+getThosePages();
+console.log(pages);
 const App = () => (
     <div id="page-inner">
         <Header />
