@@ -10,7 +10,7 @@ class NavItems extends React.Component {
         return this.props.menuItems.map((item, i) => {
             return (
                 <li key={i} id={'menu-item-' + item.ID} className={'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID} >
-                <Link to="{item.url}">{item.post_title}</Link>
+                <Link to={item.url}>{item.title}</Link>
                 </li>
 
             )

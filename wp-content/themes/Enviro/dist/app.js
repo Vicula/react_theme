@@ -25374,8 +25374,8 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { key: i, id: 'menu-item-' + item.ID, className: 'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { to: '{item.url}' },
-                    item.post_title
+                    { to: item.url },
+                    item.title
                 )
             );
         });
