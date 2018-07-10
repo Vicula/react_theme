@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LoadingIcon from '../../../dist/images/loading-icon.gif';
-
+import HomeHeader from './home-header';
 
 class Home extends React.Component {
 
@@ -37,13 +37,13 @@ class Home extends React.Component {
     render() {
 
         return (
-            <div>
-                <div className="container">
-                    <h1 className="posts-title">HOMEPAGE</h1>
-                    
+
+                <div className="container homePage">
+                  <HomeHeader/>
+
                 </div>
 
-            </div>
+            
         );
     }
 }

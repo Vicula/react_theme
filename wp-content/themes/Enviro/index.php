@@ -18,7 +18,7 @@
         <title>Enviro</title>
         <!-- TYPEKIT -->
         <script src="https://use.typekit.net/gsj1tlx.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script>try{Typekit.load({ async: false });}catch(e){}</script>
         <!-- END TYPEKIT -->
         <?php wp_head(); ?>
     </head>
