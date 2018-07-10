@@ -4,7 +4,7 @@
  *
  * @since Enviro 1.0
  */
-
+ include_once dirname(__FILE__) . '/inc/custom-fields.php';
 /**
  *
  * TAKE GLOBAL DESCRIPTION OUT OF HEADER.PHP AND GENERATE IT FROM A FUNCTION
@@ -69,6 +69,8 @@ function create_post_type() {
 			'name' => __( 'Retailers' ),
 			'singular_name' => __( 'Retailer' )
 		),
+		'show_in_rest'       => true,
+  	'rest_controller_class' => 'WP_REST_Posts_Controller',
 		'public' => true,
 		'exclude_from_search' => true,
 		'menu_icon' => 'dashicons-screenoptions',
@@ -83,6 +85,8 @@ function create_post_type() {
 			'name' => __( 'Press' ),
 			'singular_name' => __( 'Press' )
 		),
+		'show_in_rest'       => true,
+  	'rest_controller_class' => 'WP_REST_Posts_Controller',
 		'public' => true,
 		'exclude_from_search' => true,
 		'menu_icon' => 'dashicons-screenoptions',
@@ -144,6 +148,14 @@ function enviro_register_fields() {
     );
     // Add Published Date
 	register_rest_field( 'post',
+        'published_date',
+        array(
+            'get_callback'		=> 'enviro_published_date',
+            'update_callback'	=> null,
+            'schema'			=> null
+        )
+	);
+	register_rest_field( 'page',
         'published_date',
         array(
             'get_callback'		=> 'enviro_published_date',
