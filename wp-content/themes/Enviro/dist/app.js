@@ -25393,7 +25393,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'ul',
             { className: 'menu', id: 'menu-primary-menu' },
-            this.props.posts.length ? this.renderItems() : this.renderEmpty()
+            this.props.menuItems.length ? this.renderItems() : this.renderEmpty()
         );
     }
 }
