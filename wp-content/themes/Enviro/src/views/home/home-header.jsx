@@ -10,12 +10,12 @@ class HomeHeader extends React.Component {
 
         return (
           <header>
-            <div className="mobilePic" style="background-image: url('<?php the_field('header_pic') ?>')"></div>
+            <div className="mobilePic" style={{backgroundImage:url('')}}></div>
               <div className="headerCont">
 
                 <Link to="/products" className="btn">Find your flavor</Link>
               </div>
-            <div className="headerPic" style="background-image: url('<?php the_field('header_pic') ?>')"></div>
+            <div className="headerPic" style={{backgroundImage:url('')}}></div>
           </header>
         );
     }

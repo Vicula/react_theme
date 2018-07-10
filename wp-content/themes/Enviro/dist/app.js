@@ -25390,7 +25390,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: 'background-image: url(\'<?php the_field(\'header_pic\') ?>\')' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: url('') } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
@@ -25400,7 +25400,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
           'Find your flavor'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: 'background-image: url(\'<?php the_field(\'header_pic\') ?>\')' })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: url('') } })
     );
   }
 }
