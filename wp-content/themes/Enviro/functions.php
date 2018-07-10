@@ -163,6 +163,14 @@ function enviro_register_fields() {
             'schema'			=> null
         )
 	);
+	register_rest_field( 'press',
+        'custom_fields',
+        array(
+            'get_callback'		=> 'add_post_custom_fields',
+            'update_callback'	=> null,
+            'schema'			=> null
+        )
+	);
 	register_rest_field( 'page',
         'custom_fields',
         array(
