@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+console.log(EnviroSettings.menu);
 const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
