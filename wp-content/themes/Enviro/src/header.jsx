@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-console.log(EnviroSettings.menu);
+import NavItems from './nav-items';
+
 const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
             <nav className="navbar navbar-expand-lg navbar-light " >
-                <h1 className="site-title"><Link to={EnviroSettings.path} >Enviro</Link></h1>
+                <h1 className="site-title navH1"><Link to={EnviroSettings.path} ><span className="acc">NavyHill</span></Link></h1>
+                <div className="menu-primary-menu-container">
+
+                <NavItems menuItems={EnviroSettings.menu} />
+                
+                </div>
+                <Link to={EnviroSettings.path}><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
