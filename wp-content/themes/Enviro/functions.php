@@ -10,6 +10,7 @@
  * TAKE GLOBAL DESCRIPTION OUT OF HEADER.PHP AND GENERATE IT FROM A FUNCTION
  *
  */
+ show_admin_bar( false );
 function site_global_description()
 {
 	global $page, $paged;
