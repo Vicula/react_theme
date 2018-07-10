@@ -41,7 +41,7 @@ class Home extends React.Component {
 
                 <div className="container homePage">
                   <HomeHeader/>
-
+                  <LongCTA/>
                 </div>
 
 

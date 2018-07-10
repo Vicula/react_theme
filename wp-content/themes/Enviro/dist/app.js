@@ -25306,7 +25306,6 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_header__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_longCTA__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_longCTA___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__);
 
 
 
@@ -25342,7 +25341,8 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'container homePage' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_header__["a" /* default */], null)
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_header__["a" /* default */], null),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__["a" /* default */], null)
         );
     }
 }
@@ -25486,7 +25486,7 @@ class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
 }
 
-/* unused harmony default export */ var _unused_webpack_default_export = (LongCTA);
+/* harmony default export */ __webpack_exports__["a"] = (LongCTA);
 
 /***/ })
 /******/ ]);
