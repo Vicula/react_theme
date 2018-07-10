@@ -9,6 +9,10 @@
 function enviro_get_author_name( $object, $field_name, $request ) {
 	return get_the_author_meta( 'display_name' );
 }
+function add_post_custom_fields($object,$field_name, $request){
+  $field_array = get_post_custom($object['ID']);
+  return $field_array;
+}
 function enviro_get_image_src( $object, $field_name, $request ) {
     if($object[ 'featured_media' ] == 0) {
         return $object[ 'featured_media' ];

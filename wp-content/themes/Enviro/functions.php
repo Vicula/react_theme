@@ -156,9 +156,9 @@ function enviro_register_fields() {
         )
 	);
 	register_rest_field( 'page',
-        'published_date',
+        'custom_fields',
         array(
-            'get_callback'		=> 'enviro_published_date',
+            'get_callback'		=> 'add_post_custom_fields',
             'update_callback'	=> null,
             'schema'			=> null
         )
