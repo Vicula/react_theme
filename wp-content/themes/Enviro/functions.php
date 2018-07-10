@@ -102,6 +102,7 @@ function create_post_type() {
 function enviro_scripts() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'enviro-style-dist', get_stylesheet_directory_uri() . '/dist/style.css');
+  wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', 'screen');
 	wp_enqueue_style( 'enviro-style', get_stylesheet_uri() );
     // Load scripts
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', '20171006', false );
