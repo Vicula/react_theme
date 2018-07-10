@@ -24606,11 +24606,11 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
             'nav',
             { className: 'navbar nav navbar-expand-lg navbar-light' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                { className: 'site-title navH1' },
+                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                { to: EnviroSettings.path },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { to: EnviroSettings.path },
+                    'h1',
+                    { className: 'site-title navH1' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'span',
                         { className: 'acc' },

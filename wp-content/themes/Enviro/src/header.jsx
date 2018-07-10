@@ -6,7 +6,7 @@ const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
             <nav className="navbar nav navbar-expand-lg navbar-light" >
-                <h1 className="site-title navH1"><Link to={EnviroSettings.path} ><span className="acc">NavyHill</span></Link></h1>
+                <Link to={EnviroSettings.path} ><h1 className="site-title navH1"><span className="acc">NavyHill</span></h1></Link>
                 <div className="menu-primary-menu-container">
                   <NavItems menuItems={EnviroSettings.menu} />
                 </div>
