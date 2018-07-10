@@ -24595,7 +24595,7 @@ module.exports = hoistNonReactStatics;
 
 
 
-
+console.log(EnviroSettings.menu);
 const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: 'container' },
@@ -25371,7 +25371,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         return this.props.menuItems.map((item, i) => {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'li',
-                { id: '{\'menu-item-\' + item.ID}', className: '{\'menu-item menu-item-type-post_type menu-item-object-page menu-item-\' + item.ID}' },
+                { key: i, id: 'menu-item-' + item.ID, className: 'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
                     { to: '{item.url}' },

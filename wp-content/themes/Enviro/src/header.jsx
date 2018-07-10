@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavItems from './nav-items';
-
+console.log(EnviroSettings.menu);
 const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
@@ -10,7 +10,7 @@ const Header = () => (
                 <div className="menu-primary-menu-container">
 
                 <NavItems menuItems={EnviroSettings.menu} />
-                
+
                 </div>
                 <Link to={EnviroSettings.path}><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
