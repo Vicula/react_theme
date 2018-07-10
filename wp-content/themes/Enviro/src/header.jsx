@@ -5,7 +5,7 @@ console.log(EnviroSettings.menu);
 const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
-            <nav className="navbar navbar-expand-lg navbar-light " >
+            <nav className="navbar nav navbar-expand-lg navbar-light" >
                 <h1 className="site-title navH1"><Link to={EnviroSettings.path} ><span className="acc">NavyHill</span></Link></h1>
                 <div className="menu-primary-menu-container">
 

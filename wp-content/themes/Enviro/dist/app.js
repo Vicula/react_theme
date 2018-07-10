@@ -24604,7 +24604,7 @@ const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
         { id: 'masthead', className: 'site-header', role: 'banner' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'nav',
-            { className: 'navbar navbar-expand-lg navbar-light ' },
+            { className: 'navbar nav navbar-expand-lg navbar-light' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h1',
                 { className: 'site-title navH1' },
