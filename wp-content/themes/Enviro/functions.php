@@ -111,7 +111,7 @@ function enviro_scripts() {
     wp_enqueue_script( 'enviro-script', get_stylesheet_directory_uri() . '/dist/app.js' , array(), '1.0', true );
 	$url = trailingslashit( home_url('/') );
 	$path = trailingslashit( parse_url( $url, PHP_URL_PATH ) );
-  $primaryMenu = wp_get_nav_menu_object('primary');
+  $primaryMenu = wp_get_nav_menu_object('Primary Menu');
 	wp_scripts()->add_data( 'enviro-script', 'data', sprintf( 'var EnviroSettings = %s;', wp_json_encode( array(
 		'title' => get_bloginfo( 'name', 'display' ),
 		'path' => $path,

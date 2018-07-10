@@ -40,7 +40,7 @@ class Home extends React.Component {
             <div>
                 <div className="container">
                     <h1 className="posts-title">HOMEPAGE</h1>
-
+                    
                 </div>
 
             </div>
