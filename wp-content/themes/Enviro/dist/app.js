@@ -25386,11 +25386,10 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
-
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: url('') } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
@@ -25400,7 +25399,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
           'Find your flavor'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: url('') } })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } })
     );
   }
 }
