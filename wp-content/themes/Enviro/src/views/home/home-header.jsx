@@ -7,10 +7,12 @@ import * as pageActions from '../../actions/pageActions';
 
 class HomeHeader extends React.Component {
   constructor(props) {
+      this.goGetImage = this.goGetImage.bind(this);
       super(props);
       this.state = {
         headerPic:''
       }
+        this.goGetImage = this.goGetImage.bind(this);
   }
   goGetImage(id){
     var that = this;
@@ -45,7 +47,7 @@ class HomeHeader extends React.Component {
                 <span dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></span>
                 <Link to="/products" className="btn">Find your flavor</Link>
               </div>
-            <div className="headerPic" style={{backgroundImage:'url(' + pageActions.getImages(this.props.cf.header_pic[0]) + ')'}}></div>
+            <div className="headerPic" style={{backgroundImage:'url(' + this.state.headerPic + ')'}}></div>
           </header>
         );
     }
