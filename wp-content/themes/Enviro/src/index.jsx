@@ -20,7 +20,7 @@ require('./style.scss');
 function getThosePages(){
   var that = this;
   var totalPages;
-  fetch(EnviroSettings.URL.api + "/pages/")
+  fetch(EnviroSettings.URL.api + "/pages")
       .then(function (response) {
           // for (var pair of response.headers.entries()) {
           //
@@ -36,6 +36,7 @@ function getThosePages(){
           if (!response.ok) {
               throw Error(response.statusText);
           }
+          console.log(response);
           return response.json();
       })
       .then(function (results) {
