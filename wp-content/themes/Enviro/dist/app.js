@@ -2620,7 +2620,7 @@ function furtherConstruction() {
                     var str = routeUrl[1];
                     str = str.replace(/\s/g, '');
 
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, component: AddPropsToRoute(component_holder[r.custom_fields.themeTemplate], v) });
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, component: AddPropsToRoute(component_holder[r.custom_fields.themeTemplate], r) });
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )
