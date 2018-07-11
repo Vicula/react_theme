@@ -2576,7 +2576,7 @@ function getThosePages() {
         return response.json();
     }).then(function (results) {
 
-        var allPages;
+        var allPages = [];
 
         for (var i = 0; i < results.length; i++) {
             console.log(results[i]);
