@@ -610,7 +610,8 @@ footer {
       font-weight: 100;
       width: 65%;
       padding-left: 2%;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      display: block; }
       @media only screen and (max-width: 768px) {
         .homePage header .headerCont strong, .homePage header .headerCont b {
           margin-bottom: 25px;
