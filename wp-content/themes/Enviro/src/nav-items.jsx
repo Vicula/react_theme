@@ -9,7 +9,7 @@ class NavItems extends React.Component {
     renderItems() {
         return this.props.menuItems.map((item, i) => {
           var baseurl = item.url;
-          var cutUrl = baseurl.split('.com/');
+          var cutUrl = baseurl.split('.com');
             return (
                 <li key={i} id={'menu-item-' + item.ID} className={'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID} >
                 <Link to={cutUrl[1]}>{item.title}</Link>

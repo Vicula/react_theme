@@ -2579,7 +2579,6 @@ function getThosePages() {
         var allPages = [];
 
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i]);
             allPages.push(results[i]);
         }
 
@@ -25376,7 +25375,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     renderItems() {
         return this.props.menuItems.map((item, i) => {
             var baseurl = item.url;
-            var cutUrl = baseurl.split('.com/');
+            var cutUrl = baseurl.split('.com');
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'li',
                 { key: i, id: 'menu-item-' + item.ID, className: 'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID },
