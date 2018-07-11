@@ -50,16 +50,7 @@ function getThosePages(){
       });
 }
 getThosePages();
-const AddPropsToRoute = (WrappedComponent, passedProps)=>{
-    return (
-        class Route extends React.Component{
-            render(){
-                let props = Object.assign({}, this.props, passedProps)
-                return  <WrappedComponent {...props} />
-            }
-        }
-    )
-}
+
 function furtherConstruction(){
 
   const App = () => (
@@ -71,8 +62,10 @@ function furtherConstruction(){
                       var routeUrl = r.link.split('.com/');
                       var str = routeUrl[1]
                       str = str.replace(/\s/g, '');
-
-                      return <Route exact path={EnviroSettings.path + str } component={component_holder[r.custom_fields.themeTemplate]} />
+                      var Comp = component_holder[r.custom_fields.themeTemplate];
+                      console.log(component_holder[r.custom_fields.themeTemplate]);
+                      console.log(Comp)
+                      return <Route exact path={EnviroSettings.path + str } key={r.ID} component={component_holder[r.custom_fields.themeTemplate]} />
                   })}
                   <Route path="*" component={NotFound} />
               </Switch>

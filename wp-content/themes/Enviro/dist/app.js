@@ -2595,14 +2595,7 @@ function getThosePages() {
     });
 }
 getThosePages();
-const AddPropsToRoute = (WrappedComponent, passedProps) => {
-    return class Route extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-        render() {
-            let props = Object.assign({}, this.props, passedProps);
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(WrappedComponent, props);
-        }
-    };
-};
+
 function furtherConstruction() {
 
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2619,8 +2612,10 @@ function furtherConstruction() {
                     var routeUrl = r.link.split('.com/');
                     var str = routeUrl[1];
                     str = str.replace(/\s/g, '');
-
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, component: component_holder[r.custom_fields.themeTemplate] });
+                    var Comp = component_holder[r.custom_fields.themeTemplate];
+                    console.log(component_holder[r.custom_fields.themeTemplate]);
+                    console.log(Comp);
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, key: r.ID, component: component_holder[r.custom_fields.themeTemplate] });
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )
