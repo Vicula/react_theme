@@ -8,9 +8,8 @@ export function receiveStuff(json) {
   return {type: types.RECEIVE_STUFF, stuff: json.stuff};
 }
 
-export function getImages(id){
-  var url;
-  fetch(EnviroSettings.URL.api + "/media/"+id)
+function goGetImage(id){
+  return fetch(EnviroSettings.URL.api + "/media/"+id)
       .then(function (response) {
 
           if (!response.ok) {
@@ -21,13 +20,15 @@ export function getImages(id){
       })
       .then(function (results) {
 
-          url = results['source_url'];
+
           return results['source_url'];
       }).catch(function (error) {
           console.log('There has been a problem with your fetch operation: ' + error.message);
       });
+}
 
-  return { type: types.FETCH_STUFF,url}
+export function getImages(id){
+  return goGetImage(id);
 }
 
 export function fetchStuff() {

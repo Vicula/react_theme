@@ -27915,35 +27915,35 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 
 
 function url() {
-    return 'www.url.com';
+  return 'www.url.com';
 }
 
 function receiveStuff(json) {
-    return { type: __WEBPACK_IMPORTED_MODULE_0__actionTypes__["b" /* RECEIVE_STUFF */], stuff: json.stuff };
+  return { type: __WEBPACK_IMPORTED_MODULE_0__actionTypes__["b" /* RECEIVE_STUFF */], stuff: json.stuff };
+}
+
+function goGetImage(id) {
+  return fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+
+    return response.json();
+  }).then(function (results) {
+
+    return results['source_url'];
+  }).catch(function (error) {
+    console.log('There has been a problem with your fetch operation: ' + error.message);
+  });
 }
 
 function getImages(id) {
-    var url;
-    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
-
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-
-        return response.json();
-    }).then(function (results) {
-
-        url = results['source_url'];
-        return results['source_url'];
-    }).catch(function (error) {
-        console.log('There has been a problem with your fetch operation: ' + error.message);
-    });
-
-    return { type: __WEBPACK_IMPORTED_MODULE_0__actionTypes__["a" /* FETCH_STUFF */], url };
+  return goGetImage(id);
 }
 
 function fetchStuff() {
-    return {};
+  return {};
 }
 
 /***/ })
