@@ -22,17 +22,7 @@ function getThosePages(){
   var totalPages;
   fetch(EnviroSettings.URL.api + "/pages")
       .then(function (response) {
-          for (var pair of response.headers.entries()) {
-
-              // getting the total number of pages
-              if (pair[0] == 'x-wp-totalpages') {
-                  totalPages = pair[1];
-              }
-
-              if (that.state.page >= totalPages) {
-                  that.setState({ getPosts: false })
-              }
-          }
+          
           if (!response.ok) {
               throw Error(response.statusText);
           }
