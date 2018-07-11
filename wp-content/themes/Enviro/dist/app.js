@@ -25637,7 +25637,7 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             { className: 'ctaHolder' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'cta cta1', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } },
+                { className: 'cta cta1', style: { backgroundImage: 'url(' + this.state.ctaPic1 + ')' } },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'arrowTab' },
@@ -25651,9 +25651,10 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'content content1' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_2 } }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { to: '' },
+                        { to: EnviroSettings.path + this.props.cf.cta_2_link },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
                             { className: 'btn btn1' },
@@ -25664,7 +25665,7 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'cta cta2', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } },
+                { className: 'cta cta2', style: { backgroundImage: 'url(' + this.state.ctaPic2 + ')' } },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'arrowTab' },
@@ -25678,9 +25679,10 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'content content2' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_3 } }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { to: '' },
+                        { to: EnviroSettings.path + this.props.cf.cta_3_link },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'span',
                             { className: 'btn btn2' },
