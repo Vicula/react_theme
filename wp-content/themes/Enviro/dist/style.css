@@ -663,7 +663,7 @@ footer {
     @media only screen and (max-width: 768px) {
       .homePage .ctaLong .content {
         width: 90%; } }
-    .homePage .ctaLong .content p:first-of-type {
+    .homePage .ctaLong .content strong:first-of-type {
       font-family: din-condensed, sans-serif;
       font-style: normal;
       font-weight: 100;
@@ -671,16 +671,16 @@ footer {
       letter-spacing: 1px;
       text-transform: uppercase; }
       @media only screen and (max-width: 768px) {
-        .homePage .ctaLong .content p:first-of-type {
+        .homePage .ctaLong .content strong:first-of-type {
           font-size: 18px;
           line-height: 32px; } }
-    .homePage .ctaLong .content p:nth-child(2) {
+    .homePage .ctaLong .content strong:nth-child(2) {
       font-family: europa,sans-serif;
       margin-bottom: 25px;
       font-size: 55px;
       font-weight: 100; }
       @media only screen and (max-width: 768px) {
-        .homePage .ctaLong .content p:nth-child(2) {
+        .homePage .ctaLong .content strong:nth-child(2) {
           font-size: 30px; } }
 
 .homePage .ctaHolder {

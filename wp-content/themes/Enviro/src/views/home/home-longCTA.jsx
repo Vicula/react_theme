@@ -41,7 +41,7 @@ class LongCTA extends React.Component {
         return (
           <section className="ctaLong" style={{backgroundImage:'url(' + this.state.ctaPic + ')'}}>
         		<div className="arrowTab"><span>&#8902;</span></div>
-        		<div className="content">{this.props.cf.cta_1}<Link className="btn" to={EnviroSettings.path + this.props.cf.cta_link }>Learn more</Link></div>
+        		<div className="content"><span  dangerouslySetInnerHTML={{__html:this.props.cf.cta_1}}></span><Link className="btn" to={EnviroSettings.path + this.props.cf.cta_link }>Learn more</Link></div>
         	</section>
         );
     }
