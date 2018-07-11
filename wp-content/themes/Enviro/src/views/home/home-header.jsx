@@ -7,8 +7,9 @@ import * as pageActions from '../../actions/pageActions';
 
 class HomeHeader extends React.Component {
   constructor(props) {
-      this.goGetImage = this.goGetImage.bind(this);
+
       super(props);
+      this.goGetImage = this.goGetImage.bind(this);
       this.state = {
         headerPic:''
       }

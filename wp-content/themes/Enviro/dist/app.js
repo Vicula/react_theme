@@ -25447,8 +25447,9 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
-    this.goGetImage = this.goGetImage.bind(this);
+
     super(props);
+    this.goGetImage = this.goGetImage.bind(this);
     this.state = {
       headerPic: ''
     };
