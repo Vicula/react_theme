@@ -48,16 +48,17 @@ getThosePages();
 
 function buildThoseRoutes(data){
   var routes;
-  $.each(data,function(i,v){
-    var routeUrl = v.link.split('.com/');
-    if(v.custom_fields.themeTemplate == 'Home'){
+  for(var i=0;i<data.length;i++){
+    var routeUrl = data[i].link.split('.com/');
+    if(data[i].custom_fields.themeTemplate == 'Home'){
       var DaRoute = Home;
     }else{
       var DaRoute = DefaultPage;
     }
-    var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={v} {...props} />}/>);
+    var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={data[i]} {...props} />}/>);
     routes = routes + route;
-  });
+  }
+
   return routes;
 };
 
