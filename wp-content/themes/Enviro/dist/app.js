@@ -2579,7 +2579,7 @@ function getThosePages() {
         var allPages;
         console.log(results.length);
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i]);
+            console.log(i);
             allPages.push(results[i]);
         }
 
