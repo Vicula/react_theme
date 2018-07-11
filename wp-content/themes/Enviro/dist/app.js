@@ -25477,7 +25477,6 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
   }
 
   render() {
-    console.log(this.state.headerPic, 'please look here');
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
@@ -25517,11 +25516,39 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
 
 
 class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+    constructor(props) {
 
+        super(props);
+        this.goGetImage = this.goGetImage.bind(this);
+        this.state = {
+            ctaPic: ''
+        };
+        this.goGetImage = this.goGetImage.bind(this);
+    }
+    goGetImage(id) {
+        var that = this;
+        fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+
+            return response.json();
+        }).then(function (results) {
+
+            that.setState({ ctaPic: results['source_url'] });
+            return results['source_url'];
+        }).catch(function (error) {
+            console.log('There has been a problem with your fetch operation: ' + error.message);
+        });
+    }
+    componentWillMount() {
+        this.goGetImage(this.props.cf.cta_1_pic[0]);
+    }
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'section',
-            { className: 'ctaLong', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } },
+            { className: 'ctaLong', style: { backgroundImage: 'url(' + this.state.ctaPic + ')' } },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'arrowTab' },
@@ -25534,9 +25561,10 @@ class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'content' },
+                this.cf.cta_1,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { className: 'btn', to: '' },
+                    { className: 'btn', to: EnviroSettings.path + this.cf.cta_link },
                     'Learn more'
                 )
             )
