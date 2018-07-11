@@ -1,4 +1,4 @@
-const GetImage = (id)=>{
+var GetImage = (id)=>{
   fetch(EnviroSettings.URL.api + "/media/"+id)
       .then(function (response) {
 
