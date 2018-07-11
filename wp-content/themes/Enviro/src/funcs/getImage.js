@@ -9,8 +9,8 @@ var GetImage = (id)=>{
           return response.json();
       })
       .then(function (results) {
-        console.log(results);
-          return results.source_url;
+        console.log(results['source_url']);
+          return results['source_url'];
       }).catch(function (error) {
           console.log('There has been a problem with your fetch operation: ' + error.message);
       });
