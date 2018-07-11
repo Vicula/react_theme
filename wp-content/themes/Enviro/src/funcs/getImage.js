@@ -16,6 +16,7 @@ const GetImage = (id)=>{
       }).catch(function (error) {
           console.log('There has been a problem with your fetch operation: ' + error.message);
       });
+      console.log(url);
   return url;
 }
 
