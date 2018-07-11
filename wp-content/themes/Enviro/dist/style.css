@@ -61,6 +61,9 @@ a.link-fix {
     color: white;
     background: #A08D72; }
 
+strong {
+  display: block; }
+
 input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea, select {
   -webkit-appearance: none;
   -moz-appearance: none;

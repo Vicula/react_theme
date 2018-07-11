@@ -72,6 +72,7 @@ a.link-fix {	color: inherit; text-decoration: none;}
 .button, button, input[type="submit"] {	background: $button; padding: 15px 25px; color: white; text-decoration: none; border: 0; @include transition(all 0.2s ease); cursor: pointer; @include browser-appearance(none); border-radius: 0;
 	&:hover {	color: white; background: $hover; }
 }
+strong{display: block;}
 label {}
 
 input[type="text"], input[type="email"], input[type="password"],input[type="tel"], textarea, select {	@include browser-appearance(none); border: 2px solid $primary; border-radius: 0; background: white; padding: 10px; resize: none; width: 100%; color: $primary; }
