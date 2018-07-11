@@ -24627,7 +24627,7 @@ module.exports = hoistNonReactStatics;
 
 
 
-
+console.log(EnviroSettings.menu);
 const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: 'container' },

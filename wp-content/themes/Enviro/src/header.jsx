@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavItems from './nav-items';
-
+console.log(EnviroSettings.menu);
 const Header = () => (
     <div className="container">
         <header id="masthead" className="site-header" role="banner">
