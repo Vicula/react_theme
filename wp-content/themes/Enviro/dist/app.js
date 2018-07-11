@@ -25458,7 +25458,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
   }
 
   render() {
-    console.log(this.state.headerPic);
+    console.log(this.state.headerPic, 'please look here');
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,

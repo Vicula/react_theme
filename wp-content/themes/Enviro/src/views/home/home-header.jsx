@@ -18,7 +18,7 @@ class HomeHeader extends React.Component {
   }
 
     render() {
-        console.log(this.state.headerPic);
+        console.log(this.state.headerPic,'please look here');
         return (
           <header>
             <div className="mobilePic" style={{backgroundImage:'url(' + this.state.headerPic + ')'}}></div>
