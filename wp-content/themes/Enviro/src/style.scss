@@ -188,12 +188,13 @@ ul { margin: 0; }
 
     .loader-star {
         position: absolute;
-        top: calc(50% - 12px);
+        top: 50%;
+				transform: translate(-50%,-50%);
     }
 		.loader-stars .star1 {
         -webkit-animation: stars-pulse 1s ease-in-out infinite;
         animation: stars-pulse 1s ease-in-out infinite;
-        left: 50%;
+        left: 49%;
     }
 
     .loader-stars .star2 {
@@ -205,7 +206,7 @@ ul { margin: 0; }
     .loader-stars .star3 {
         -webkit-animation: stars-pulse 1s 0.4s ease-in-out infinite;
         animation: stars-pulse 1s 0.4s ease-in-out infinite;
-        left: 50%;
+        left: 51%;
     }
 }
 @-webkit-keyframes star-pulse {
