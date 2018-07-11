@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from '../../not-found';
+import GetImage from '../../funcs/getImage';
 
 class HomeHeader extends React.Component {
 
@@ -10,7 +11,7 @@ class HomeHeader extends React.Component {
       console.log(this);
         return (
           <header>
-            <div className="mobilePic" style={{backgroundImage:'url(' + Placeholder + ')'}}></div>
+            <div className="mobilePic" style={{backgroundImage:'url(' + GetImage(this.props.cf.header_pic) + ')'}}></div>
               <div className="headerCont">
 
                 <Link to="/products" className="btn">Find your flavor</Link>

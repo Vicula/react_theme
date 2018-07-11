@@ -10,11 +10,8 @@ class Home extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-
         }
-
     }
 
     componentWillUnmount() {
@@ -25,17 +22,13 @@ class Home extends React.Component {
         var that = this;
         window.onbeforeunload = function () { window.scrollTo(0, 0); }
 
-
     }
-
-
 
     componentDidUpdate() {
 
     }
 
     render() {
-      console.log(this);
         return (
 
                 <div className="container homePage">
@@ -44,7 +37,6 @@ class Home extends React.Component {
                   <DuoCTA cf={this.props.pageDets.custom_fields}/>
                   <BlogCTA cf={this.props.pageDets.custom_fields}/>
                 </div>
-
 
         );
     }
