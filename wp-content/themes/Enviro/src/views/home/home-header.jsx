@@ -35,7 +35,7 @@ class HomeHeader extends React.Component {
        });
  }
   componentWillMount() {
-    goGetImage(this.props.cf.header_pic[0]);
+    this.goGetImage(this.props.cf.header_pic[0]);
 
   }
 
