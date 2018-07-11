@@ -6,9 +6,15 @@ import NotFound from '../../not-found';
 import * as pageActions from '../../actions/pageActions';
 
 class HomeHeader extends React.Component {
-
+  constructor(props) {
+      super(props);
+      this.state = {
+        headerPic:''
+      }
+  }
   componentWillMount() {
-    console.log(pageActions.getImages(this.props.cf.header_pic[0]));
+    var headerPic = pageActions.getImages(this.props.cf.header_pic[0]);
+    this.setState({ headerPic: headerPic });
   }
 
     render() {
@@ -16,7 +22,7 @@ class HomeHeader extends React.Component {
 
         return (
           <header>
-            <div className="mobilePic" style={{backgroundImage:'url(' + pageActions.getImages(this.props.cf.header_pic[0]) + ')'}}></div>
+            <div className="mobilePic" style={{backgroundImage:'url(' + this.state.headerPic + ')'}}></div>
               <div className="headerCont" >
                 <span dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></span>
                 <Link to="/products" className="btn">Find your flavor</Link>

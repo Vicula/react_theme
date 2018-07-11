@@ -25446,9 +25446,15 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      headerPic: ''
+    };
+  }
   componentWillMount() {
-    console.log(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]));
+    var headerPic = __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]);
+    this.setState({ headerPic: headerPic });
   }
 
   render() {
@@ -25457,7 +25463,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]) + ')' } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + this.state.headerPic + ')' } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
