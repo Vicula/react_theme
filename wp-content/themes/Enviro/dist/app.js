@@ -2598,21 +2598,6 @@ function getThosePages() {
 }
 getThosePages();
 
-function buildThoseRoutes(data) {
-    var routes2;
-    for (var i = 0; i < data.length; i++) {
-        var routeUrl = data[i].link.split('.com/');
-        if (data[i].custom_fields.themeTemplate == 'Home') {
-            var DaRoute = __WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */];
-        } else {
-            var DaRoute = __WEBPACK_IMPORTED_MODULE_10__default_page__["a" /* default */];
-        }
-        var route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + routeUrl[1], render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DaRoute, _extends({ pageDets: data[i] }, props)) });
-        routes = routes + route;
-    }
-    return routes2;
-};
-
 function furtherConstruction() {
 
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2629,7 +2614,8 @@ function furtherConstruction() {
                     var routeUrl = r.link.split('.com/');
                     var str = routeUrl[1];
                     str = str.replace(/\s/g, '');
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, pageDets: r, component: component_holder[r.custom_fields.themeTemplate] });
+                    var DisplayRoute = component_holder[r.custom_fields.themeTemplate];
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DisplayRoute, _extends({ pageDets: r }, props)) });
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )

@@ -51,21 +51,6 @@ function getThosePages(){
 }
 getThosePages();
 
-function buildThoseRoutes(data){
-  var routes2;
-  for(var i=0;i<data.length;i++){
-    var routeUrl = data[i].link.split('.com/');
-    if(data[i].custom_fields.themeTemplate == 'Home'){
-      var DaRoute = Home;
-    }else{
-      var DaRoute = DefaultPage;
-    }
-    var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={data[i]} {...props} />}/>);
-    routes = routes + route;
-  }
-  return routes2;
-};
-
 function furtherConstruction(){
 
   const App = () => (
@@ -77,7 +62,8 @@ function furtherConstruction(){
                       var routeUrl = r.link.split('.com/');
                       var str = routeUrl[1]
                       str = str.replace(/\s/g, '');
-                      return <Route exact path={EnviroSettings.path + str } pageDets={r} component={component_holder[r.custom_fields.themeTemplate]}/>
+                      var DisplayRoute = component_holder[r.custom_fields.themeTemplate];
+                      return <Route exact path={EnviroSettings.path + str } render={(props) => <DisplayRoute pageDets={r} {...props} />} />
                   })}
                   <Route path="*" component={NotFound} />
               </Switch>
