@@ -50,13 +50,13 @@ function buildThoseRoutes(data){
 };
 
 function furtherConstruction(){
-console.log(pages);
+
   const App = () => (
       <div id="page-inner">
           <Header />
           <div id="content">
               <Switch>
-                  <Route exact path={EnviroSettings.path} component={Home}  render={(props) => <Home {...props}{...pages[0]} />}/>
+                  <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
                   <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
                   <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
                   <Route exact path={EnviroSettings.path + 'products'} component={Products} />

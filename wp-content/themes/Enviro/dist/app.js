@@ -2595,7 +2595,7 @@ getThosePages();
 function buildThoseRoutes(data) {};
 
 function furtherConstruction() {
-    console.log(pages);
+
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'page-inner' },
@@ -2606,7 +2606,7 @@ function furtherConstruction() {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Switch */],
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path, component: __WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */], render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */], _extends({}, props, pages[0])) }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path, render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */], _extends({ pageDets: pages[0] }, props)) }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'posts', component: __WEBPACK_IMPORTED_MODULE_6__posts__["a" /* default */] }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'posts/:slug', component: __WEBPACK_IMPORTED_MODULE_7__post__["a" /* default */] }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'products', component: __WEBPACK_IMPORTED_MODULE_8__products__["a" /* default */] }),
@@ -24629,7 +24629,7 @@ module.exports = hoistNonReactStatics;
 
 
 
-console.log(EnviroSettings.menu);
+
 const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     { className: 'container' },
