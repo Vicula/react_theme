@@ -12,8 +12,8 @@ class HomeHeader extends React.Component {
         return (
           <header>
             <div className="mobilePic" style={{backgroundImage:'url(' + GetImage(this.props.cf.header_pic) + ')'}}></div>
-              <div className="headerCont" dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}>
-                
+              <div className="headerCont" >
+                <span dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></span>
                 <Link to="/products" className="btn">Find your flavor</Link>
               </div>
             <div className="headerPic" style={{backgroundImage:'url(' + GetImage(this.props.cf.header_pic) + ')'}}></div>
