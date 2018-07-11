@@ -52,7 +52,7 @@ function getThosePages(){
 getThosePages();
 const AddPropsToRoute = (WrappedComponent, passedProps)=>{
     return (
-        class Route extends Component{
+        class Route extends React.Component{
             render(){
                 let props = Object.assign({}, this.props, passedProps)
                 return  <WrappedComponent {...props} />

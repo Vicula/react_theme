@@ -2596,7 +2596,7 @@ function getThosePages() {
 }
 getThosePages();
 const AddPropsToRoute = (WrappedComponent, passedProps) => {
-    return class Route extends Component {
+    return class Route extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         render() {
             let props = Object.assign({}, this.props, passedProps);
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(WrappedComponent, props);
