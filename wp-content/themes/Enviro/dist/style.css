@@ -175,11 +175,17 @@ ul {
     color: #2D3C4B; }
 
 .loading-panel {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #2d3c4b;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #243B55, #2d3c4b);
+  background: -webkit-linear-gradient(to top, #1a232b, #2d3c4b);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #243B55, #2d3c4b);
+  background: linear-gradient(to top, #1a232b, #2d3c4b);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .woocommerce-cart, .woocommerce-checkout {
