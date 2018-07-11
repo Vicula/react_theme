@@ -2578,6 +2578,7 @@ function getThosePages() {
 
         var allPages;
         for (var i = 0; i < results.length; i++) {
+            console.log(results[i]);
             allPages.push(results[i]);
         }
 
