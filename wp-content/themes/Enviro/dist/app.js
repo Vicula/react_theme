@@ -25561,10 +25561,10 @@ class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'content' },
-                this.cf.cta_1,
+                this.props.cf.cta_1,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { className: 'btn', to: EnviroSettings.path + this.cf.cta_link },
+                    { className: 'btn', to: EnviroSettings.path + this.props.cf.cta_link },
                     'Learn more'
                 )
             )
