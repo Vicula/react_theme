@@ -25447,11 +25447,13 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
-  componentWillMount() {}
+  componentWillMount() {
+    console.log(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]));
+  }
 
   render() {
     console.log(this.props.cf.header_pic[0]);
-    console.log(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]));
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,

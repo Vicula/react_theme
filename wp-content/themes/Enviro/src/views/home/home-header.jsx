@@ -8,12 +8,12 @@ import * as pageActions from '../../actions/pageActions';
 class HomeHeader extends React.Component {
 
   componentWillMount() {
-
+    console.log(pageActions.getImages(this.props.cf.header_pic[0]));
   }
 
     render() {
       console.log(this.props.cf.header_pic[0])
-      console.log(pageActions.getImages(this.props.cf.header_pic[0]));
+
         return (
           <header>
             <div className="mobilePic" style={{backgroundImage:'url(' + pageActions.getImages(this.props.cf.header_pic[0]) + ')'}}></div>
