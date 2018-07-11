@@ -78,11 +78,6 @@ function furtherConstruction(){
       </div>
   );
 
-  // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
-  // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
-  // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
-  // <Route exact path={EnviroSettings.path + 'products'} component={Products} />
-  // <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
   // Routes
   const routes = (
     <Provider store={store}>
