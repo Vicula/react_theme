@@ -25458,8 +25458,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
   }
 
   render() {
-    console.log(this.props.cf.header_pic[0]);
-
+    console.log(this.state.headerPic);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
