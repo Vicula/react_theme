@@ -25438,7 +25438,6 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_pageActions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__);
 // External dependencies
 
 
@@ -25452,11 +25451,11 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
 
   render() {
     console.log(this.props.cf.header_pic[0]);
-    console.log(GetImage(this.props.cf.header_pic[0]));
+    console.log(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]));
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + GetImage(this.props.cf.header_pic[0]) + ')' } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]) + ')' } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
@@ -25467,7 +25466,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
           'Find your flavor'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + GetImage(this.props.cf.header_pic[0]) + ')' } })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__["a" /* getImages */](this.props.cf.header_pic[0]) + ')' } })
     );
   }
 }
@@ -27910,7 +27909,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 
 "use strict";
 /* unused harmony export receiveStuff */
-/* unused harmony export getImages */
+/* harmony export (immutable) */ __webpack_exports__["a"] = getImages;
 /* unused harmony export fetchStuff */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(97);
 
