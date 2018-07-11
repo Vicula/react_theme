@@ -599,7 +599,7 @@ footer {
           line-height: 45px;
           font-size: 50px;
           letter-spacing: 0px; } }
-    .homePage header .headerCont p {
+    .homePage header .headerCont b {
       font-family: "europa",sans-serif;
       font-weight: 400;
       letter-spacing: 1.5px;
@@ -612,7 +612,7 @@ footer {
       padding-left: 2%;
       margin-bottom: 30px; }
       @media only screen and (max-width: 768px) {
-        .homePage header .headerCont p {
+        .homePage header .headerCont b {
           margin-bottom: 25px;
           margin-top: 25px;
           width: 100%;
