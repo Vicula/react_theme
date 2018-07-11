@@ -23,6 +23,9 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+        <div class="loading-panel">
+          
+        </div>
         <div id="page" class="hfeed site">
             <div id="content">
                 <div class="loader-gif">
