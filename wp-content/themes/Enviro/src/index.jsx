@@ -35,9 +35,7 @@ function getThosePages(){
           for(var i=0;i< results.length;i++){
             allPages.push(results[i]);
           }
-          jQuery.each(results,function(i,single){
-            allPages.push(single);
-          });
+          
           pages = allPages;
           furtherConstruction();
       }).catch(function (error) {
