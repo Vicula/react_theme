@@ -25449,7 +25449,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
-    console.log(Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic));
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
@@ -25457,13 +25457,14 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
+        this.props.cf.header_content,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
           { to: '/products', className: 'btn' },
           'Find your flavor'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic) + ')' } })
     );
   }
 }
@@ -26548,7 +26549,7 @@ var GetImage = id => {
 
         return response.json();
     }).then(function (results) {
-        console.log(results['source_url']);
+
         return results['source_url'];
     }).catch(function (error) {
         console.log('There has been a problem with your fetch operation: ' + error.message);
