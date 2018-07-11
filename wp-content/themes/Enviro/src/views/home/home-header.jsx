@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from '../../not-found';
-import GetImage from '../../funcs/getImage';
+import GetImage from '../../funcs/getImage.js';
 
 class HomeHeader extends React.Component {
 
