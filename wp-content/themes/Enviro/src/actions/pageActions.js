@@ -9,7 +9,7 @@ export function receiveStuff(json) {
 }
 
 function goGetImage(id){
-  return fetch(EnviroSettings.URL.api + "/media/"+id)
+    fetch(EnviroSettings.URL.api + "/media/"+id)
       .then(function (response) {
 
           if (!response.ok) {

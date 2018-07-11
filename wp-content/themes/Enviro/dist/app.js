@@ -27923,7 +27923,7 @@ function receiveStuff(json) {
 }
 
 function goGetImage(id) {
-  return fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+  fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
 
     if (!response.ok) {
       throw Error(response.statusText);
