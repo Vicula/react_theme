@@ -12,6 +12,11 @@ export default function page(state = initialState.page, action) {
       console.log('RECEIVE_STUFF Action')
       return newState;
     default:
-      return state;
+      if(!state){
+        return initialState.page
+      }else{
+        return state;
+      }
+
   }
 }

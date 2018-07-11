@@ -26481,7 +26481,12 @@ function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default
       console.log('RECEIVE_STUFF Action');
       return newState;
     default:
-      return state;
+      if (!state) {
+        return __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page;
+      } else {
+        return state;
+      }
+
   }
 }
 
