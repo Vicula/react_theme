@@ -26465,7 +26465,7 @@ const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* combineRed
 
 
 
-function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].stuff, action) {
+function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page, action) {
   let newState;
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_1__actions_actionTypes__["a" /* FETCH_STUFF */]:
