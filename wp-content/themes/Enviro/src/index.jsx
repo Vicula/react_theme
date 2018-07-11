@@ -44,37 +44,40 @@ function getThosePages(){
               allPages.push(single);
           })
           pages = allPages;
-
+          furtherConstruction();
       }).catch(function (error) {
           console.log('There has been a problem with your fetch operation: ' + error.message);
       });
 }
 getThosePages();
+
+function furtherConstruction(){
 console.log(pages);
-const App = () => (
-    <div id="page-inner">
-        <Header />
-        <div id="content">
-            <Switch>
-                <Route exact path={EnviroSettings.path} component={Home} />
-                <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
-                <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
-                <Route exact path={EnviroSettings.path + 'products'} component={Products} />
-                <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
-                <Route path="*" component={NotFound} />
-            </Switch>
-        </div>
-        <Footer />
-    </div>
-);
+  const App = () => (
+      <div id="page-inner">
+          <Header />
+          <div id="content">
+              <Switch>
+                  <Route exact path={EnviroSettings.path} component={Home} />
+                  <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
+                  <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
+                  <Route exact path={EnviroSettings.path + 'products'} component={Products} />
+                  <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
+                  <Route path="*" component={NotFound} />
+              </Switch>
+          </div>
+          <Footer />
+      </div>
+  );
 
-// Routes
-const routes = (
-    <Router>
-        <Route path="/" component={App} />
-    </Router>
-);
+  // Routes
+  const routes = (
+      <Router>
+          <Route path="/" component={App} />
+      </Router>
+  );
 
-render(
-    (routes), document.getElementById('page')
-);
+  render(
+      (routes), document.getElementById('page')
+  );
+}
