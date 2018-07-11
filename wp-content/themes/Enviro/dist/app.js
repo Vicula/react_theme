@@ -26487,7 +26487,7 @@ function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default
 "use strict";
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  pages: []
+  pages: ['test']
 });
 
 /***/ }),
