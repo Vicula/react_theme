@@ -26473,10 +26473,10 @@ const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineRed
 function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page, action) {
   let newState;
   switch (action.type) {
-    case FETCH_STUFF:
+    case __WEBPACK_IMPORTED_MODULE_1__actions_actionTypes__["a" /* FETCH_STUFF */]:
       console.log('FETCH_STUFF Action');
       return action;
-    case RECEIVE_STUFF:
+    case __WEBPACK_IMPORTED_MODULE_1__actions_actionTypes__["b" /* RECEIVE_STUFF */]:
       newState = action.stuff;
       console.log('RECEIVE_STUFF Action');
       return newState;
@@ -26501,10 +26501,10 @@ function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default
 
 "use strict";
 const FETCH_STUFF = 'FETCH_STUFF';
-/* unused harmony export FETCH_STUFF */
+/* harmony export (immutable) */ __webpack_exports__["a"] = FETCH_STUFF;
 
 const RECEIVE_STUFF = 'RECEIVE_STUFF';
-/* unused harmony export RECEIVE_STUFF */
+/* harmony export (immutable) */ __webpack_exports__["b"] = RECEIVE_STUFF;
 
 
 /***/ }),

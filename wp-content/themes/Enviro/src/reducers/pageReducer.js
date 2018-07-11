@@ -1,5 +1,5 @@
 import initialState from './initialState';
-import * as types from '../actions/actionTypes';
+import {FETCH_STUFF, RECEIVE_STUFF} from '../actions/actionTypes';
 
 export default function page(state = initialState.page, action) {
   let newState;
