@@ -2566,8 +2566,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var pages;
 
-// Load the Sass file
-__webpack_require__(79);
+var component_holder = {
+    'Home': __WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */],
+    'Default': __WEBPACK_IMPORTED_MODULE_10__default_page__["a" /* default */]
+
+    // Load the Sass file
+};__webpack_require__(79);
 function getThosePages() {
     var that = this;
     var totalPages;
@@ -2595,7 +2599,7 @@ function getThosePages() {
 getThosePages();
 
 function buildThoseRoutes(data) {
-    var routes;
+    var routes2;
     for (var i = 0; i < data.length; i++) {
         var routeUrl = data[i].link.split('.com/');
         if (data[i].custom_fields.themeTemplate == 'Home') {
@@ -2606,7 +2610,7 @@ function buildThoseRoutes(data) {
         var route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + routeUrl[1], render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DaRoute, _extends({ pageDets: data[i] }, props)) });
         routes = routes + route;
     }
-    return routes;
+    return routes2;
 };
 
 function furtherConstruction() {
@@ -2621,13 +2625,18 @@ function furtherConstruction() {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Switch */],
                 null,
-                buildThoseRoutes(pages),
+                pages.map(r => {
+                    var routeUrl = r.link.split('.com/');
+                    var str = routeUrl[1];
+                    str = str.replace(/\s/g, '');
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, pageDets: v, component: component_holder[r.custom_fields.themeTemplate] });
+                }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__footer__["a" /* default */], null)
     );
-    console.log(App);
+
     // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
     // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
     // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />

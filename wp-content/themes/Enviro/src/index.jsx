@@ -16,6 +16,11 @@ import Placeholder from '../dist/images/placeholder.jpg';
 
 var pages;
 
+var component_holder = {
+  'Home': Home,
+  'Default': DefaultPage
+}
+
 // Load the Sass file
 require('./style.scss');
 function getThosePages(){
@@ -47,7 +52,7 @@ function getThosePages(){
 getThosePages();
 
 function buildThoseRoutes(data){
-  var routes;
+  var routes2;
   for(var i=0;i<data.length;i++){
     var routeUrl = data[i].link.split('.com/');
     if(data[i].custom_fields.themeTemplate == 'Home'){
@@ -58,7 +63,7 @@ function buildThoseRoutes(data){
     var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={data[i]} {...props} />}/>);
     routes = routes + route;
   }
-  return routes;
+  return routes2;
 };
 
 function furtherConstruction(){
@@ -68,14 +73,19 @@ function furtherConstruction(){
           <Header />
           <div id="content">
               <Switch>
-                  {buildThoseRoutes(pages)}
+                  {pages.map((r) => {
+                      var routeUrl = r.link.split('.com/');
+                      var str = routeUrl[1]
+                      str = str.replace(/\s/g, '');
+                      return <Route exact path={EnviroSettings.path + str } pageDets={v} component={component_holder[r.custom_fields.themeTemplate]}/>
+                  })}
                   <Route path="*" component={NotFound} />
               </Switch>
           </div>
           <Footer />
       </div>
   );
-  console.log(App);
+
   // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
   // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
   // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
@@ -89,6 +99,7 @@ function furtherConstruction(){
   );
 
   render(
+
       (routes), document.getElementById('page')
   );
 }
