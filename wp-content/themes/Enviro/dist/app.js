@@ -2572,9 +2572,10 @@ function getThosePages() {
         if (!response.ok) {
             throw Error(response.statusText);
         }
-        console.log(response);
+
         return response.json();
     }).then(function (results) {
+        console.log(results);
         var allPages;
         results.forEach(function (single) {
             allPages.push(single);
