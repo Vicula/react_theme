@@ -217,7 +217,7 @@ ul {
     left: 55%; }
 
 @-webkit-keyframes star-pulse {
-  0%,
+  0% { }
   100% {
     -webkit-transform: scale(0) rotate(0deg);
     transform: scale(0) rotate(0deg);
@@ -234,7 +234,7 @@ ul {
     transform: scale(1.5) rotate(90deg); } }
 
 @keyframes star-pulse {
-  0%,
+  0% { }
   100% {
     -webkit-transform: scale(0) rotate(0deg);
     transform: scale(0) rotate(0deg);

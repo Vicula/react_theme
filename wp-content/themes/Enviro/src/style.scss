@@ -210,7 +210,7 @@ ul { margin: 0; }
     }
 }
 @-webkit-keyframes star-pulse {
-			 0%,
+			 0%{}
 			 100% {
 					 -webkit-transform: scale(0) rotate(0deg);
 					 transform: scale(0) rotate(0deg);
@@ -232,7 +232,7 @@ ul { margin: 0; }
 	 }
 
 	 @keyframes star-pulse {
-			 0%,
+			 0%{}
 			 100% {
 					 -webkit-transform: scale(0) rotate(0deg);
 					 transform: scale(0) rotate(0deg);
