@@ -26472,7 +26472,7 @@ const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineRed
 
 
 function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page, action) {
-  return state;
+  return [];
 }
 
 /***/ }),
