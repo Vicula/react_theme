@@ -2546,6 +2546,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__dist_images_loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 
 
 
@@ -2608,14 +2610,15 @@ function furtherConstruction() {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Switch */],
                 null,
-                pages.map(r => {
+                pages.map((r, i) => {
                     var routeUrl = r.link.split('.com/');
                     var str = routeUrl[1];
                     str = str.replace(/\s/g, '');
                     var Comp = component_holder[r.custom_fields.themeTemplate];
-                    console.log(component_holder[r.custom_fields.themeTemplate]);
-                    console.log(Comp);
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, key: r.ID, component: component_holder[r.custom_fields.themeTemplate] });
+                    if (!Comp) {
+                        Comp = component_holder['Default'];
+                    }
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, key: i, render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Comp, _extends({ pageDets: r, key: i }, props)) });
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )

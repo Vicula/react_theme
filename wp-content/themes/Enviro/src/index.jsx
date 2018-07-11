@@ -58,14 +58,15 @@ function furtherConstruction(){
           <Header />
           <div id="content">
               <Switch>
-                  {pages.map((r) => {
+                  {pages.map((r,i) => {
                       var routeUrl = r.link.split('.com/');
                       var str = routeUrl[1]
                       str = str.replace(/\s/g, '');
                       var Comp = component_holder[r.custom_fields.themeTemplate];
-                      console.log(component_holder[r.custom_fields.themeTemplate]);
-                      console.log(Comp)
-                      return <Route exact path={EnviroSettings.path + str } key={r.ID} component={component_holder[r.custom_fields.themeTemplate]} />
+                      if(!Comp){
+                        Comp = component_holder['Default'];
+                      }
+                      return <Route exact path={EnviroSettings.path + str } key={i} render={(props) => <Comp pageDets={r} key={i} {...props} />} />
                   })}
                   <Route path="*" component={NotFound} />
               </Switch>
