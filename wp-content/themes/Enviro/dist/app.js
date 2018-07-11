@@ -25587,112 +25587,100 @@ class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor(props) {
+  constructor(props) {
 
-        super(props);
-        this.goGetImage = this.goGetImage.bind(this);
-        this.state = {
-            ctaPic1: '',
-            ctaPic2: ''
-        };
-        this.goGetImage = this.goGetImage.bind(this);
-    }
-    goGetImage(id, id2) {
-        var that = this;
-        fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+    super(props);
+    this.goGetImage = this.goGetImage.bind(this);
+    this.state = {
+      ctaPic1: '',
+      ctaPic2: ''
+    };
+    this.goGetImage = this.goGetImage.bind(this);
+  }
+  goGetImage(id, prop) {
+    var that = this;
+    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
 
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
 
-            return response.json();
-        }).then(function (results) {
-
-            that.setState({ ctaPic: results['source_url'] });
-            return results['source_url'];
-        }).catch(function (error) {
-            console.log('There has been a problem with your fetch operation: ' + error.message);
-        });
-        fetch(EnviroSettings.URL.api + "/media/" + id2).then(function (response) {
-
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
-
-            return response.json();
-        }).then(function (results) {
-
-            that.setState({ ctaPic2: results['source_url'] });
-            return results['source_url'];
-        }).catch(function (error) {
-            console.log('There has been a problem with your fetch operation: ' + error.message);
-        });
-    }
-    componentWillMount() {
-        this.goGetImage(this.props.cf.cta_2_pic[0], this.props.cf.cta_3_pic[0]);
-    }
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'section',
-            { className: 'ctaHolder' },
+      return response.json();
+    }).then(function (results) {
+      var returnObj = {};
+      returnObj[prop] = results['source_url'];
+      that.setState(returnObj);
+      return results['source_url'];
+    }).catch(function (error) {
+      console.log('There has been a problem with your fetch operation: ' + error.message);
+    });
+  }
+  componentWillMount() {
+    this.goGetImage(this.props.cf.cta_2_pic[0], 'ctaPic1');
+    this.goGetImage(this.props.cf.cta_3_pic[0], 'ctaPic2');
+  }
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'section',
+      { className: 'ctaHolder' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'cta cta1', style: { backgroundImage: 'url(' + this.state.ctaPic1 + ')' } },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'arrowTab' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'span',
+            null,
+            '\u22C6'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'overlay' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'content content1' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_2 } }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+            { to: EnviroSettings.path + this.props.cf.cta_2_link },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'cta cta1', style: { backgroundImage: 'url(' + this.state.ctaPic1 + ')' } },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'arrowTab' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        null,
-                        '\u22C6'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'overlay' }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'content content1' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_2 } }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { to: EnviroSettings.path + this.props.cf.cta_2_link },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'span',
-                            { className: 'btn btn1' },
-                            'Read more'
-                        )
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'cta cta2', style: { backgroundImage: 'url(' + this.state.ctaPic2 + ')' } },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'arrowTab' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        null,
-                        '\u22C6'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'overlay' }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'content content2' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_3 } }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { to: EnviroSettings.path + this.props.cf.cta_3_link },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'span',
-                            { className: 'btn btn2' },
-                            'Read more'
-                        )
-                    )
-                )
+              'span',
+              { className: 'btn btn1' },
+              'Read more'
             )
-        );
-    }
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'cta cta2', style: { backgroundImage: 'url(' + this.state.ctaPic2 + ')' } },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'arrowTab' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'span',
+            null,
+            '\u22C6'
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'overlay' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'content content2' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.cta_3 } }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+            { to: EnviroSettings.path + this.props.cf.cta_3_link },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'span',
+              { className: 'btn btn2' },
+              'Read more'
+            )
+          )
+        )
+      )
+    );
+  }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (DuoCTA);
