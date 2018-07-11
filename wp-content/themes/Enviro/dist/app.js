@@ -25356,10 +25356,10 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'container homePage' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_header__["a" /* default */], null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__["a" /* default */], null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_duoCTA__["a" /* default */], null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__home_blogCTA__["a" /* default */], null)
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__home_header__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_duoCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__home_blogCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields })
         );
     }
 }
@@ -25440,6 +25440,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
+    console.log(this);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,

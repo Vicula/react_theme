@@ -39,10 +39,10 @@ class Home extends React.Component {
         return (
 
                 <div className="container homePage">
-                  <HomeHeader/>
-                  <LongCTA/>
-                  <DuoCTA/>
-                  <BlogCTA/>
+                  <HomeHeader cf={this.props.pageDets.custom_fields}/>
+                  <LongCTA cf={this.props.pageDets.custom_fields}/>
+                  <DuoCTA cf={this.props.pageDets.custom_fields}/>
+                  <BlogCTA cf={this.props.pageDets.custom_fields}/>
                 </div>
 
 

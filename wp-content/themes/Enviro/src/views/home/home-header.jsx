@@ -7,6 +7,7 @@ import NotFound from '../../not-found';
 class HomeHeader extends React.Component {
 
     render() {
+      console.log(this);
         return (
           <header>
             <div className="mobilePic" style={{backgroundImage:'url(' + Placeholder + ')'}}></div>
