@@ -30,9 +30,10 @@ function getThosePages(){
           return response.json();
       })
       .then(function (results) {
-        console.log(results);
+
           var allPages;
           results.forEach(function (single) {
+            console.log(single);
               allPages.push(single);
           })
           pages = allPages;
