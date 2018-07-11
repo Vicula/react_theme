@@ -50,7 +50,16 @@ function getThosePages(){
       });
 }
 getThosePages();
-
+const AddPropsToRoute = (WrappedComponent, passedProps)=>{
+    return (
+        class Route extends Component{
+            render(){
+                let props = Object.assign({}, this.props, passedProps)
+                return  <WrappedComponent {...props} />
+            }
+        }
+    )
+}
 function furtherConstruction(){
 
   const App = () => (
@@ -62,8 +71,8 @@ function furtherConstruction(){
                       var routeUrl = r.link.split('.com/');
                       var str = routeUrl[1]
                       str = str.replace(/\s/g, '');
-                      var DisplayRoute = component_holder[r.custom_fields.themeTemplate];
-                      return <Route exact path={EnviroSettings.path + str } render={(props) => <DisplayRoute pageDets={r} {...props} />} />
+                      
+                      return <Route exact path={EnviroSettings.path + str } component={AddPropsToRoute(component_holder[r.custom_fields.themeTemplate], v)} />
                   })}
                   <Route path="*" component={NotFound} />
               </Switch>

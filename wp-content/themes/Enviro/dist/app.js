@@ -2546,8 +2546,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__dist_images_loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__dist_images_placeholder_jpg__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 
 
 
@@ -2597,7 +2595,14 @@ function getThosePages() {
     });
 }
 getThosePages();
-
+const AddPropsToRoute = (WrappedComponent, passedProps) => {
+    return class Route extends Component {
+        render() {
+            let props = Object.assign({}, this.props, passedProps);
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(WrappedComponent, props);
+        }
+    };
+};
 function furtherConstruction() {
 
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2614,8 +2619,8 @@ function furtherConstruction() {
                     var routeUrl = r.link.split('.com/');
                     var str = routeUrl[1];
                     str = str.replace(/\s/g, '');
-                    var DisplayRoute = component_holder[r.custom_fields.themeTemplate];
-                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DisplayRoute, _extends({ pageDets: r }, props)) });
+
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + str, component: AddPropsToRoute(component_holder[r.custom_fields.themeTemplate], v) });
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_11__not_found__["a" /* default */] })
             )
