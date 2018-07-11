@@ -2606,7 +2606,6 @@ function buildThoseRoutes(data) {
         var route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + routeUrl[1], render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DaRoute, _extends({ pageDets: data[i] }, props)) });
         routes = routes + route;
     }
-
     return routes;
 };
 
@@ -2628,6 +2627,7 @@ function furtherConstruction() {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__footer__["a" /* default */], null)
     );
+    console.log(App);
     // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
     // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
     // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />

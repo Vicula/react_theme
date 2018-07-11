@@ -58,7 +58,6 @@ function buildThoseRoutes(data){
     var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={data[i]} {...props} />}/>);
     routes = routes + route;
   }
-
   return routes;
 };
 
@@ -76,6 +75,7 @@ function furtherConstruction(){
           <Footer />
       </div>
   );
+  console.log(App);
   // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
   // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
   // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
