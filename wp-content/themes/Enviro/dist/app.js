@@ -2577,7 +2577,7 @@ function getThosePages() {
     }).then(function (results) {
 
         var allPages;
-        for (i = 0; i < results.length; i++) {
+        for (var i = 0; i < results.length; i++) {
             allPages.push(results[i]);
         }
         jQuery.each(results, function (i, single) {
