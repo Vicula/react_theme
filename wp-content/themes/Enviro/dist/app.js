@@ -25341,14 +25341,13 @@ class Product extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 
+
 class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
     constructor(props) {
         super(props);
         this.state = {};
     }
-
-    componentWillUnmount() {}
 
     componentDidMount() {
         var that = this;
@@ -25438,7 +25437,8 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_pageActions__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_pageActions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__actions_pageActions__);
 // External dependencies
 
 
@@ -25448,13 +25448,15 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
+  componentWillMount() {}
+
   render() {
     console.log(this.props.cf.header_pic[0]);
-    console.log(Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic[0]));
+    console.log(GetImage(this.props.cf.header_pic[0]));
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic[0]) + ')' } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + GetImage(this.props.cf.header_pic[0]) + ')' } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
@@ -25465,7 +25467,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
           'Find your flavor'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic[0]) + ')' } })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'headerPic', style: { backgroundImage: 'url(' + GetImage(this.props.cf.header_pic[0]) + ')' } })
     );
   }
 }
@@ -26476,6 +26478,7 @@ const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineRed
 function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].pages, action) {
   let newState;
   switch (action.type) {
+
     case __WEBPACK_IMPORTED_MODULE_1__actions_actionTypes__["a" /* FETCH_STUFF */]:
       console.log('FETCH_STUFF Action');
       return action;
@@ -26537,33 +26540,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ __webpack_exports__["a"] = (thunk);
 
 /***/ }),
-/* 99 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const GetImage = id => {
-    var url;
-    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
-
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-
-        return response.json();
-    }).then(function (results) {
-        console.log(results);
-        url = results['source_url'];
-        return results['source_url'];
-    }).catch(function (error) {
-        console.log('There has been a problem with your fetch operation: ' + error.message);
-    });
-    console.log(url);
-    return url;
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (GetImage);
-
-/***/ }),
+/* 99 */,
 /* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27925,6 +27902,49 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
   verify(mapStateToProps, 'mapStateToProps', displayName);
   verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
   verify(mergeProps, 'mergeProps', displayName);
+}
+
+/***/ }),
+/* 125 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export receiveStuff */
+/* unused harmony export getImages */
+/* unused harmony export fetchStuff */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actionTypes__ = __webpack_require__(97);
+
+
+function url() {
+    return 'www.url.com';
+}
+
+function receiveStuff(json) {
+    return { type: __WEBPACK_IMPORTED_MODULE_0__actionTypes__["b" /* RECEIVE_STUFF */], stuff: json.stuff };
+}
+
+function getImages(id) {
+    var url;
+    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+
+        return response.json();
+    }).then(function (results) {
+
+        url = results['source_url'];
+        return results['source_url'];
+    }).catch(function (error) {
+        console.log('There has been a problem with your fetch operation: ' + error.message);
+    });
+
+    return { type: __WEBPACK_IMPORTED_MODULE_0__actionTypes__["a" /* FETCH_STUFF */], url };
+}
+
+function fetchStuff() {
+    return {};
 }
 
 /***/ })
