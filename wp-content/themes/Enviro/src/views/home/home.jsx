@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import LoadingIcon from '../../../dist/images/loading-icon.gif';
 import HomeHeader from './home-header';
 import LongCTA from './home-longCTA';
+import DuoCTA from './home-duoCTA';
+import BlogCTA from './home-blogCTA';
 
 class Home extends React.Component {
 
@@ -42,6 +44,8 @@ class Home extends React.Component {
                 <div className="container homePage">
                   <HomeHeader/>
                   <LongCTA/>
+                  <DuoCTA/>
+                  <BlogCTA/>
                 </div>
 
 

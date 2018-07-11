@@ -4,20 +4,24 @@ import { Link } from 'react-router-dom';
 import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from '../../not-found';
 
-class HomeHeader extends React.Component {
+class BlogCTA extends React.Component {
 
     render() {
         return (
-          <header>
-            <div className="mobilePic" style={{backgroundImage:'url(' + Placeholder + ')'}}></div>
-              <div className="headerCont">
-
-                <Link to="/products" className="btn">Find your flavor</Link>
-              </div>
-            <div className="headerPic" style={{backgroundImage:'url(' + Placeholder + ')'}}></div>
-          </header>
+          
+          <section className="blogCTA">
+        		<div className="blogPic" style={{backgroundImage:'url(' + Placeholder + ')'}}></div>
+        		<div className="blogCont">
+        			<div className="holder">
+        				<span className="star">&#8902;</span>
+        				<section><h2></h2><div><span>James</span></div></section>
+        				<p></p>
+        				<Link className="btn" to="">Read post</Link>
+        			</div>
+        		</div>
+        	</section>
         );
     }
 }
 
-export default HomeHeader;
+export default BlogCTA;
