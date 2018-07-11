@@ -10,6 +10,8 @@
  * TAKE GLOBAL DESCRIPTION OUT OF HEADER.PHP AND GENERATE IT FROM A FUNCTION
  *
  */
+ remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
  show_admin_bar( false );
 function site_global_description()
 {

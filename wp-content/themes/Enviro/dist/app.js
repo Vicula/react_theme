@@ -25449,7 +25449,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
-
+    console.log(Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic));
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,

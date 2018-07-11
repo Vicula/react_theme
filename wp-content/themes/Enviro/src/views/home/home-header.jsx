@@ -8,7 +8,7 @@ import GetImage from '../../funcs/getImage.js';
 class HomeHeader extends React.Component {
 
     render() {
-
+      console.log(GetImage(this.props.cf.header_pic));
         return (
           <header>
             <div className="mobilePic" style={{backgroundImage:'url(' + GetImage(this.props.cf.header_pic) + ')'}}></div>
