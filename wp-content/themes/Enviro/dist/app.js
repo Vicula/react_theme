@@ -2545,6 +2545,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dist_images_loading_icon_gif___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__dist_images_loading_icon_gif__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dist_images_placeholder_jpg__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__dist_images_placeholder_jpg__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 
 
 
@@ -2590,6 +2592,8 @@ function getThosePages() {
 }
 getThosePages();
 
+function buildThoseRoutes(data) {};
+
 function furtherConstruction() {
     console.log(pages);
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -2602,7 +2606,7 @@ function furtherConstruction() {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Switch */],
                 null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path, component: __WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */] }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path, component: __WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */], render: props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__views_home_home__["a" /* default */], _extends({}, props, pages[0])) }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'posts', component: __WEBPACK_IMPORTED_MODULE_6__posts__["a" /* default */] }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'posts/:slug', component: __WEBPACK_IMPORTED_MODULE_7__post__["a" /* default */] }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { exact: true, path: EnviroSettings.path + 'products', component: __WEBPACK_IMPORTED_MODULE_8__products__["a" /* default */] }),
@@ -25339,7 +25343,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     componentDidUpdate() {}
 
     render() {
-
+        console.log(this);
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'container homePage' },

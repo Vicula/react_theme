@@ -45,6 +45,10 @@ function getThosePages(){
 }
 getThosePages();
 
+function buildThoseRoutes(data){
+
+};
+
 function furtherConstruction(){
 console.log(pages);
   const App = () => (
@@ -52,7 +56,7 @@ console.log(pages);
           <Header />
           <div id="content">
               <Switch>
-                  <Route exact path={EnviroSettings.path} component={Home} />
+                  <Route exact path={EnviroSettings.path} component={Home}  render={(props) => <Home {...props}{...pages[0]} />}/>
                   <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
                   <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
                   <Route exact path={EnviroSettings.path + 'products'} component={Products} />
