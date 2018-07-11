@@ -77,7 +77,7 @@ function furtherConstruction(){
                       var routeUrl = r.link.split('.com/');
                       var str = routeUrl[1]
                       str = str.replace(/\s/g, '');
-                      return <Route exact path={EnviroSettings.path + str } pageDets={v} component={component_holder[r.custom_fields.themeTemplate]}/>
+                      return <Route exact path={EnviroSettings.path + str } pageDets={r} component={component_holder[r.custom_fields.themeTemplate]}/>
                   })}
                   <Route path="*" component={NotFound} />
               </Switch>
