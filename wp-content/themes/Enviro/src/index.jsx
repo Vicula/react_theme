@@ -9,6 +9,7 @@ import Posts from './posts';
 import Post from './post';
 import Products from './products';
 import Product from './product';
+import DefaultPage from './default-page';
 import NotFound from './not-found';
 import LoadingIcon from '../dist/images/loading-icon.gif';
 import Placeholder from '../dist/images/placeholder.jpg';
@@ -46,7 +47,18 @@ function getThosePages(){
 getThosePages();
 
 function buildThoseRoutes(data){
-
+  var routes;
+  $.each(data,function(i,v){
+    var routeUrl = v.link.split('.com/');
+    if(v.custom_fields.themeTemplate == 'Home'){
+      var DaRoute = Home;
+    }else{
+      var DaRoute = DefaultPage;
+    }
+    var route = (<Route exact path={EnviroSettings.path + routeUrl[1] } render={(props) => <DaRoute pageDets={v} {...props} />}/>);
+    routes = routes + route;
+  });
+  return routes;
 };
 
 function furtherConstruction(){
@@ -56,18 +68,18 @@ function furtherConstruction(){
           <Header />
           <div id="content">
               <Switch>
-                  <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
-                  <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
-                  <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
-                  <Route exact path={EnviroSettings.path + 'products'} component={Products} />
-                  <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
+                  {buildThoseRoutes(pages)}
                   <Route path="*" component={NotFound} />
               </Switch>
           </div>
           <Footer />
       </div>
   );
-
+  // <Route exact path={EnviroSettings.path} render={(props) => <Home pageDets={pages[0]} {...props} />}/>
+  // <Route exact path={EnviroSettings.path + 'posts'} component={Posts} />
+  // <Route exact path={EnviroSettings.path + 'posts/:slug'} component={Post} />
+  // <Route exact path={EnviroSettings.path + 'products'} component={Products} />
+  // <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
   // Routes
   const routes = (
       <Router>
