@@ -632,7 +632,7 @@ footer{
 					letter-spacing: 0px;
 				}
 			}
-			b{@include font1;text-transform: none;font-weight: 100;width: 65%;padding-left: 2%;margin-bottom: 30px;
+			strong,b{@include font1;text-transform: none;font-weight: 100;width: 65%;padding-left: 2%;margin-bottom: 30px;
 				@media #{$phone}{
 					margin-bottom: 25px;
 					margin-top: 25px;

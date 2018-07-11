@@ -8,6 +8,7 @@ import GetImage from '../../funcs/getImage.js';
 class HomeHeader extends React.Component {
 
     render() {
+      console.log(this.props.cf.header_pic)
       console.log(GetImage(this.props.cf.header_pic));
         return (
           <header>

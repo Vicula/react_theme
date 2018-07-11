@@ -1,4 +1,4 @@
-var GetImage = (id)=>{
+const GetImage = (id)=>{
   fetch(EnviroSettings.URL.api + "/media/"+id)
       .then(function (response) {
 
@@ -9,7 +9,7 @@ var GetImage = (id)=>{
           return response.json();
       })
       .then(function (results) {
-      
+          console.log(results);
           return results['source_url'];
       }).catch(function (error) {
           console.log('There has been a problem with your fetch operation: ' + error.message);

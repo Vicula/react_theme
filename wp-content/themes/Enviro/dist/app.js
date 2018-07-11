@@ -25449,6 +25449,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
+    console.log(this.props.cf.header_pic);
     console.log(Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage_js__["a" /* default */])(this.props.cf.header_pic));
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
@@ -26540,7 +26541,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var GetImage = id => {
+const GetImage = id => {
     fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
 
         if (!response.ok) {
@@ -26549,7 +26550,7 @@ var GetImage = id => {
 
         return response.json();
     }).then(function (results) {
-
+        console.log(results);
         return results['source_url'];
     }).catch(function (error) {
         console.log('There has been a problem with your fetch operation: ' + error.message);
