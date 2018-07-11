@@ -25434,6 +25434,7 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__funcs_getImage__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__funcs_getImage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage__);
 // External dependencies
 
 
@@ -25448,7 +25449,7 @@ class HomeHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'header',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage__["a" /* default */])(this.props.cf.header_pic) + ')' } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mobilePic', style: { backgroundImage: 'url(' + Object(__WEBPACK_IMPORTED_MODULE_4__funcs_getImage__["default"])(this.props.cf.header_pic) + ')' } }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'headerCont' },
@@ -25709,26 +25710,10 @@ class DefaultPage extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
 
 /***/ }),
 /* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, __webpack_exports__) {
 
 "use strict";
-const GetImage = id => {
-    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
-
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-
-        return response.json();
-    }).then(function (results) {
-        console.log(results);
-        return results.source_url;
-    }).catch(function (error) {
-        console.log('There has been a problem with your fetch operation: ' + error.message);
-    });
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (GetImage);
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/viccarpenter/CobbleHill/newCobbleHill/wp-content/themes/Enviro/src/funcs/getImage.jsx'");
 
 /***/ }),
 /* 88 */
