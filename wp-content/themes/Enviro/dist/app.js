@@ -26453,9 +26453,7 @@ function symbolObservablePonyfill(root) {
 
 
 
-const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({
-  page: __WEBPACK_IMPORTED_MODULE_1__pageReducer__["a" /* default */]
-});
+const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({});
 
 /* harmony default export */ __webpack_exports__["a"] = (rootReducer);
 
@@ -26464,12 +26462,13 @@ const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineRed
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = page;
+/* unused harmony export default */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__initialState__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__actions_actionTypes__ = __webpack_require__(97);
 
 
 
+console.log(__WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page);
 function page(state = __WEBPACK_IMPORTED_MODULE_0__initialState__["a" /* default */].page, action) {
   let newState;
   switch (action.type) {

@@ -1,6 +1,7 @@
 import initialState from './initialState';
 import {FETCH_STUFF, RECEIVE_STUFF} from '../actions/actionTypes';
 
+console.log(initialState.page);
 export default function page(state = initialState.page, action) {
   let newState;
   switch (action.type) {
