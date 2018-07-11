@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import configureStore from './store/configureStore';
-
+import { Provider } from 'react-redux'
 import Header from './header';
 import Home from './views/home/home';
 import Footer from './footer';
@@ -85,9 +85,11 @@ function furtherConstruction(){
   // <Route exact path={EnviroSettings.path + 'products/:product'} component={Product} />
   // Routes
   const routes = (
-      <Router store={store}>
+    <Provider store={store}>
+      <Router>
           <Route path="/" component={App} />
       </Router>
+      </Provider>
   );
 
   render(

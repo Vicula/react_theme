@@ -26,7 +26,9 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.5"
+  },
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch"

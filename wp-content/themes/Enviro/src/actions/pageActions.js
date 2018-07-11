@@ -9,17 +9,5 @@ export function receiveStuff(json) {
 }
 
 export function fetchStuff() {
-  return dispatch => {
-    return fetch(url(), {
-      method: 'GET',
-      mode: 'cors',
-      credentials: 'include',
-      headers: {
-        'x-api-key': apiKey,
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(json => dispatch(receiveStuff(json)));
-  };
+  return { type: types.FETCH_STUFF,[]}
 }
