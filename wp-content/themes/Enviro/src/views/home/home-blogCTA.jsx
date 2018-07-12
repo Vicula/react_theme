@@ -48,7 +48,7 @@ class BlogCTA extends React.Component {
         return (
 
           <section className="blogCTA">
-            <LazyLoad height={200} offset={100}>
+            <LazyLoad offset={200}>
         		  <div className="blogPic" style={{backgroundImage:'url(' + this.state.blogPic + ')'}}></div>
             </LazyLoad>
         		<div className="blogCont">

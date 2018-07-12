@@ -25434,7 +25434,7 @@ class LongCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_1_react_lazyload___default.a,
-      { height: 200, offset: 100 },
+      { offset: 200 },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'section',
         { className: 'ctaLong', style: { backgroundImage: 'url(' + this.state.ctaPic + ')' } },
@@ -25523,7 +25523,7 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             { className: 'ctaHolder' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_lazyload___default.a,
-                { height: 200, offset: 100 },
+                { offset: 200 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'cta cta1', style: { backgroundImage: 'url(' + this.state.ctaPic1 + ')' } },
@@ -25555,7 +25555,7 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_lazyload___default.a,
-                { height: 200, offset: 100 },
+                { offset: 200 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'cta cta2', style: { backgroundImage: 'url(' + this.state.ctaPic2 + ')' } },
@@ -25649,7 +25649,7 @@ class BlogCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             { className: 'blogCTA' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_lazyload___default.a,
-                { height: 200, offset: 100 },
+                { offset: 200 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'blogPic', style: { backgroundImage: 'url(' + this.state.blogPic + ')' } })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

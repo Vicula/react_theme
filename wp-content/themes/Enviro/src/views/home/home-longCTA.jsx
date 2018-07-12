@@ -40,7 +40,7 @@ class LongCTA extends React.Component {
   }
     render() {
         return (
-          <LazyLoad height={200} offset={100}>
+          <LazyLoad offset={200}>
             <section className="ctaLong" style={{backgroundImage:'url(' + this.state.ctaPic + ')'}}>
           		<div className="arrowTab"><span>&#8902;</span></div>
           		<div className="content"><span dangerouslySetInnerHTML={{__html:this.props.cf.cta_1}}></span><Link className="btn" to={EnviroSettings.path + this.props.cf.cta_link }>Learn more</Link></div>

@@ -46,14 +46,14 @@ class DuoCTA extends React.Component {
     render() {
         return (
           <section className="ctaHolder">
-          <LazyLoad height={200} offset={100}>
+          <LazyLoad offset={200}>
         		<div className="cta cta1" style={{backgroundImage:'url(' + this.state.ctaPic1 + ')'}}>
         			<div className="arrowTab"><span>&#8902;</span></div>
         			<div className="overlay"></div>
         			<div className="content content1"><span dangerouslySetInnerHTML={{__html:this.props.cf.cta_2}}></span><Link to={EnviroSettings.path + this.props.cf.cta_2_link }><span className="btn btn1">Read more</span></Link></div>
         		</div>
             </LazyLoad>
-            <LazyLoad height={200} offset={100}>
+            <LazyLoad offset={200}>
         		<div className="cta cta2" style={{backgroundImage:'url(' + this.state.ctaPic2 + ')'}}>
         			<div className="arrowTab"><span>&#8902;</span></div>
         			<div className="overlay"></div>
