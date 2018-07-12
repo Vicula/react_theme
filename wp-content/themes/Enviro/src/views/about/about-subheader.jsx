@@ -44,7 +44,7 @@ class AboutSubHeader extends React.Component {
           <section className="subHeader">
         		<div className="holder">
         			<div className="logo" style={{backgroundImage:'url(' + this.state.logo + ')'}}></div>
-        			<span dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></span>
+        			<p dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></p>
         		</div>
         	</section>
         );

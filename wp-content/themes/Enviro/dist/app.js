@@ -28373,7 +28373,7 @@ class AboutSubHeader extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compo
                 'div',
                 { className: 'holder' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'logo', style: { backgroundImage: 'url(' + this.state.logo + ')' } }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.header_content } })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.cf.header_content } })
             )
         );
     }
@@ -28487,7 +28487,7 @@ class AboutCocktail extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
             return response.json();
         }).then(function (results) {
 
-            that.setState({ section_1_pic: results['source_url'] });
+            that.setState({ section_2_pic: results['source_url'] });
             return results['source_url'];
         }).catch(function (error) {
             console.log('There has been a problem with your fetch operation: ' + error.message);

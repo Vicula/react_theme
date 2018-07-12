@@ -1354,7 +1354,7 @@ footer {
         @media only screen and (max-width: 768px) {
           .aboutHolder #refreshing > div:first-of-type section h1 {
             font-size: 45px; } }
-      .aboutHolder #refreshing > div:first-of-type section p {
+      .aboutHolder #refreshing > div:first-of-type section strong {
         letter-spacing: 1px;
         font-size: 18px;
         line-height: 24px;

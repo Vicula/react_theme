@@ -28,7 +28,7 @@ class AboutCocktail extends React.Component {
        })
        .then(function (results) {
 
-          that.setState({ section_1_pic: results['source_url'] });
+          that.setState({ section_2_pic: results['source_url'] });
            return results['source_url'];
        }).catch(function (error) {
            console.log('There has been a problem with your fetch operation: ' + error.message);
