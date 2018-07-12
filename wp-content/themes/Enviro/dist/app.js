@@ -27951,18 +27951,15 @@ function fetchStuff() {
 const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
   "footer",
   null,
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", { className: "footerHolder" }),
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "section",
-    { className: "footerHolder" },
+    "div",
+    null,
+    "\xA9 2017 WSC LLC, All Rights Reserved. Site by ",
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "div",
-      null,
-      "\xA9 2017 WSC LLC, All Rights Reserved. Site by ",
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "a",
-        { href: "http://cobblehilldigital.com", target: "_blank" },
-        "Cobble Hill"
-      )
+      "a",
+      { href: "http://cobblehilldigital.com", target: "_blank" },
+      "Cobble Hill"
     )
   )
 );
