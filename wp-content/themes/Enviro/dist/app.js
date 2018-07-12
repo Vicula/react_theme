@@ -27946,20 +27946,31 @@ function fetchStuff() {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_social__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_form__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__footer_email__ = __webpack_require__(131);
+
+
+
 
 
 const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  "footer",
+  'footer',
   null,
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", { className: "footerHolder" }),
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
+    'section',
+    { className: 'footerHolder' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__footer_social__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__footer_form__["a" /* default */], null)
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
     null,
-    "\xA9 2017 WSC LLC, All Rights Reserved. Site by ",
+    '\xA9 2017 WSC LLC, All Rights Reserved. Site by ',
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "a",
-      { href: "http://cobblehilldigital.com", target: "_blank" },
-      "Cobble Hill"
+      'a',
+      { href: 'http://cobblehilldigital.com', target: '_blank' },
+      'Cobble Hill'
     )
   )
 );
@@ -28068,6 +28079,117 @@ class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (NavItems);
+
+/***/ }),
+/* 129 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+const FooterSocial = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+	"div",
+	{ className: "socialBox" },
+	__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		"section",
+		{ className: "holder" },
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"p",
+			null,
+			"Follow @drinknavyhill"
+		),
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"section",
+			{ className: "social" },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"a",
+				{ href: "", target: "_blank" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-facebook", "aria-hidden": "true" })
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"a",
+				{ href: "", target: "_blank" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-instagram", "aria-hidden": "true" })
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"a",
+				{ href: "", target: "_blank" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { classn: "fa fa-pinterest", "aria-hidden": "true" })
+			)
+		)
+	)
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (FooterSocial);
+
+/***/ }),
+/* 130 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+const FooterForm = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+	"div",
+	{ className: "formBox" },
+	__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		"section",
+		{ className: "holder" },
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"p",
+			null,
+			"Join our mailing list to receive updates"
+		),
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"form",
+			{ action: "//drinknavyhill.us15.list-manage.com/subscribe/post?u=5b3575d2d76b5caa88fe3434f&id=49b3cefd17", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", className: "validate", target: "_blank", novalidate: true },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "email", placeholder: "Email Address", name: "EMAIL", className: "input email", id: "mce-EMAIL", required: true }),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"div",
+				{ style: { position: absolute, left: '-5000px' }, "aria-hidden": "true" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "b_5b3575d2d76b5caa88fe3434f_49b3cefd17", tabindex: "-1", value: "" })
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "submit", name: "subscribe", id: "mc-embedded-subscribe", "class": "formBtn" })
+		)
+	)
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (FooterForm);
+
+/***/ }),
+/* 131 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+const FooterEmail = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+	"div",
+	{ className: "emailBox" },
+	__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		"section",
+		{ className: "holder" },
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"p",
+			null,
+			"Drop us a line"
+		),
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", null),
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			"a",
+			{ href: "mailto:order@drinknavyhill.com" },
+			"order@drinknavyhill.com"
+		)
+	)
+);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (FooterEmail);
 
 /***/ })
 /******/ ]);
