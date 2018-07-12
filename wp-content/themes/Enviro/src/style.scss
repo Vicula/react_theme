@@ -354,6 +354,7 @@ ul { margin: 0; }
 	.fa{
 		color: white;
 		position: fixed;
+		z-index: 10;
 		top: 40px;
 		right: 5%;
 		font-size: 25px;
@@ -659,6 +660,15 @@ footer{
 
 
 .homePage{
+	.parallaxImg{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		img{width: 100%;}
+	}
 	header{background: $primary;position: relative;
 		color:#fff;
 		height: 600px;
@@ -831,7 +841,7 @@ footer{
 				z-index: 2;
 				right: 0;
 				bottom: 0;
-				opacity: 0;
+				opacity: 0.75;
 				transition: all .25s linear;
 				background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(45,45,45,1) 100%); /* FF3.6-15 */
 				background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(45,45,45,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -916,6 +926,7 @@ footer{
 		}
 
 		.cta1{
+			background: none !important;
 			border-right: 2.5px solid white;
 			@media #{$phone}{
 				border-right: none;

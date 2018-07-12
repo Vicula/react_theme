@@ -326,6 +326,7 @@ ul {
   .nav .fa {
     color: white;
     position: fixed;
+    z-index: 10;
     top: 40px;
     right: 5%;
     font-size: 25px;
@@ -605,6 +606,16 @@ footer {
         footer .footerHolder p {
           font-size: 21px; } }
 
+.homePage .parallaxImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+  .homePage .parallaxImg img {
+    width: 100%; }
+
 .homePage header {
   background: #2D3C4B;
   position: relative;
@@ -783,7 +794,7 @@ footer {
       z-index: 2;
       right: 0;
       bottom: 0;
-      opacity: 0;
+      opacity: 0.75;
       transition: all .25s linear;
       background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, #2d2d2d 100%);
       /* FF3.6-15 */
@@ -869,6 +880,7 @@ footer {
     .homePage .ctaHolder .cta:hover .overlay {
       opacity: 0; } }
   .homePage .ctaHolder .cta1 {
+    background: none !important;
     border-right: 2.5px solid white; }
     @media only screen and (max-width: 768px) {
       .homePage .ctaHolder .cta1 {
