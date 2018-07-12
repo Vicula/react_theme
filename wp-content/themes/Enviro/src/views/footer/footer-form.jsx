@@ -10,7 +10,7 @@ const FooterForm = () => (
             <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
               <input type="text" name="b_5b3575d2d76b5caa88fe3434f_49b3cefd17" tabindex="-1" value="" />
             </div>
-            <input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="formBtn"/>
+            <input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" className="formBtn"/>
 					</form>
 				</section>
 			</div>

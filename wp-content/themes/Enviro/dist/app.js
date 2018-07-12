@@ -27961,7 +27961,8 @@ const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement
     'section',
     { className: 'footerHolder' },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__footer_social__["a" /* default */], null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__footer_form__["a" /* default */], null)
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__footer_form__["a" /* default */], null),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__footer_email__["a" /* default */], null)
   ),
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
@@ -28153,7 +28154,7 @@ const FooterForm = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createEle
 				{ style: { position: 'absolute', left: '-5000px' }, "aria-hidden": "true" },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "b_5b3575d2d76b5caa88fe3434f_49b3cefd17", tabindex: "-1", value: "" })
 			),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "submit", name: "subscribe", id: "mc-embedded-subscribe", "class": "formBtn" })
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "submit", name: "subscribe", id: "mc-embedded-subscribe", className: "formBtn" })
 		)
 	)
 );
@@ -28189,7 +28190,7 @@ const FooterEmail = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createEl
 	)
 );
 
-/* unused harmony default export */ var _unused_webpack_default_export = (FooterEmail);
+/* harmony default export */ __webpack_exports__["a"] = (FooterEmail);
 
 /***/ })
 /******/ ]);
