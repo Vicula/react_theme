@@ -818,9 +818,14 @@ footer{
 		border-top: 5px solid white;
 		font-size: 0px;
 
-		&:nth-child(5){
+		&:nth-child(3){
 			.cta1{
-				float: right;
+				background: none !important;
+			}
+		}
+		&:nth-child(5){
+			.cta2{
+				background: none !important;
 			}
 		}
 
@@ -933,7 +938,6 @@ footer{
 		}
 
 		.cta1{
-			background: none !important;
 			border-right: 2.5px solid white;
 			@media #{$phone}{
 				border-right: none;

@@ -771,8 +771,10 @@ footer {
   border-bottom: 5px solid white;
   border-top: 5px solid white;
   font-size: 0px; }
-  .homePage .ctaHolder:nth-child(5) .cta1 {
-    float: right; }
+  .homePage .ctaHolder:nth-child(3) .cta1 {
+    background: none !important; }
+  .homePage .ctaHolder:nth-child(5) .cta2 {
+    background: none !important; }
   .homePage .ctaHolder .cta {
     font-size: initial;
     width: 50%;
@@ -882,7 +884,6 @@ footer {
     .homePage .ctaHolder .cta:hover .overlay {
       opacity: 0; } }
   .homePage .ctaHolder .cta1 {
-    background: none !important;
     border-right: 2.5px solid white; }
     @media only screen and (max-width: 768px) {
       .homePage .ctaHolder .cta1 {
