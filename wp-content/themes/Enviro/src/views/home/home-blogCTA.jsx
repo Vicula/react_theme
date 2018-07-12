@@ -37,7 +37,7 @@ class BlogCTA extends React.Component {
 
  }
   componentWillMount() {
-    this.goGetImage(this.props.cf.blogPic[0],'blogPic');
+    this.goGetImage(this.props.cf.blog_pic[0],'blogPic');
 
 
 

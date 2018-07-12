@@ -25740,7 +25740,7 @@ class BlogCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     });
   }
   componentWillMount() {
-    this.goGetImage(this.props.cf.blogPic[0], 'blogPic');
+    this.goGetImage(this.props.cf.blog_pic[0], 'blogPic');
   }
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
