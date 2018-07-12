@@ -28566,6 +28566,14 @@ class AboutFooter extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
 
 class AboutInfo extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
+  constructor(props) {
+
+    super(props);
+    this.getThatInfo = this.getThatInfo.bind(this);
+    this.state = {};
+    this.getThatInfo = this.getThatInfo.bind(this);
+  }
+
   getThatInfo() {
     var length = this.props.cf.specs;
     var info = [];

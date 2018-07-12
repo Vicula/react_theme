@@ -7,6 +7,16 @@ import * as pageActions from '../../actions/pageActions';
 
 class AboutInfo extends React.Component {
 
+  constructor(props) {
+
+      super(props);
+      this.getThatInfo = this.getThatInfo.bind(this);
+      this.state = {
+        
+      }
+        this.getThatInfo = this.getThatInfo.bind(this);
+  }
+
     getThatInfo(){
       var length = this.props.cf.specs;
       var info=[];
