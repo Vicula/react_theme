@@ -25706,47 +25706,73 @@ class DuoCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 class BlogCTA extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  constructor(props) {
 
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    super(props);
+    this.goGetImage = this.goGetImage.bind(this);
+    this.state = {
+      blogPic: ''
+
+    };
+    this.goGetImage = this.goGetImage.bind(this);
+  }
+  goGetImage(id, prop) {
+    var that = this;
+    fetch(EnviroSettings.URL.api + "/media/" + id).then(function (response) {
+
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
+
+      return response.json();
+    }).then(function (results) {
+      var returnObj = {};
+      returnObj[prop] = results['source_url'];
+      that.setState(returnObj);
+      return results['source_url'];
+    }).catch(function (error) {
+      console.log('There has been a problem with your fetch operation: ' + error.message);
+    });
+  }
+  componentWillMount() {
+    this.goGetImage(this.props.cf.blogPic[0], 'blogPic');
+  }
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'section',
+      { className: 'blogCTA' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'blogPic', style: { backgroundImage: 'url(' + this.state.blogPic + ')' } }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'blogCont' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'holder' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'span',
+            { className: 'star' },
+            '\u22C6'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'section',
-            { className: 'blogCTA' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'blogPic', style: { backgroundImage: 'url(' + __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default.a + ')' } }),
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h2', { dangerouslySetInnerHTML: { __html: this.props.cf.main_blog_text } }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'blogCont' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'holder' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        { className: 'star' },
-                        '\u22C6'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'section',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h2', null),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'span',
-                                null,
-                                'James'
-                            )
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', null),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                        { className: 'btn', to: '' },
-                        'Read post'
-                    )
-                )
+              'div',
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { dangerouslySetInnerHTML: { __html: this.props.cf.blog_cursive } })
             )
-        );
-    }
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.cf.blog_sub_text } }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+            { className: 'btn', to: EnviroSettings.path + this.props.cf.blog_link },
+            'Read post'
+          )
+        )
+      )
+    );
+  }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (BlogCTA);
