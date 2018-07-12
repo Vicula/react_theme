@@ -189,9 +189,6 @@ ul {
   /* Chrome 10-25, Safari 5.1-6 */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .loading-panel > section {
-    width: 100%;
-    height: 100%; }
-  .loading-panel .loader {
     position: relative;
     width: 100%;
     height: 100%;
@@ -199,10 +196,15 @@ ul {
     margin: 0px;
     display: inline-block;
     vertical-align: middle; }
-  .loading-panel .loader-star {
+  .loading-panel .loader {
     position: absolute;
+    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: middle; }
   .loading-panel .loader-stars .star1 {
     -webkit-animation: stars-pulse 1s ease-in-out infinite;
     animation: stars-pulse 1s ease-in-out infinite;

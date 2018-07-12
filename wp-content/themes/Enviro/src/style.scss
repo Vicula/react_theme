@@ -173,13 +173,21 @@ ul { margin: 0; }
 	background: -o-linear-gradient(bottom, #1a232b, #2d3c4b);
 	background: linear-gradient(to top, #1a232b, #2d3c4b);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	& > section{
+		position: relative;
 		width: 100%;
 		height: 100%;
+		border-radius: 50%;
+		margin: 0px;
+		display: inline-block;
+		vertical-align: middle;
 	}
 	.loader {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+        // width: 100%;
+        // height: 100%;
         border-radius: 50%;
         margin: 0px;
         display: inline-block;
@@ -187,9 +195,9 @@ ul { margin: 0; }
     }
 
     .loader-star {
-        position: absolute;
-        top: 50%;
-				transform: translate(-50%,-50%);
+        // position: absolute;
+        // top: 50%;
+				// transform: translate(-50%,-50%);
     }
 		.loader-stars .star1 {
         -webkit-animation: stars-pulse 1s ease-in-out infinite;
