@@ -26449,7 +26449,6 @@ function symbolObservablePonyfill(root) {
 
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_1__pageReducer__["a" /* default */]);
 const rootReducer = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({
   page: __WEBPACK_IMPORTED_MODULE_1__pageReducer__["a" /* default */]
 });
