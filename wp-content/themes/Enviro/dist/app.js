@@ -25367,7 +25367,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'parallaxImg' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'http://newcobblehill.wpengine.com/wp-content/uploads/2018/07/navyhillBack.jpg' })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'http://newcobblehill.wpengine.com/wp-content/uploads/2018/07/Untitled-2.jpg' })
             )
         );
     }
