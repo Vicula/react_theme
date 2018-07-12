@@ -1,8 +1,10 @@
 // External dependencies
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from '../../not-found';
+
 
 class BlogCTA extends React.Component {
   constructor(props) {
@@ -46,7 +48,9 @@ class BlogCTA extends React.Component {
         return (
 
           <section className="blogCTA">
-        		<div className="blogPic" style={{backgroundImage:'url(' + this.state.blogPic + ')'}}></div>
+            <LazyLoad height={200} offset={100}>
+        		  <div className="blogPic" style={{backgroundImage:'url(' + this.state.blogPic + ')'}}></div>
+            </LazyLoad>
         		<div className="blogCont">
         			<div className="holder">
         				<span className="star">&#8902;</span>
