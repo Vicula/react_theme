@@ -824,7 +824,7 @@ footer {
           left: 5%;
           top: 50%;
           transform: translate(0%, -50%); } }
-      .homePage .ctaHolder .cta .content p:first-of-type {
+      .homePage .ctaHolder .cta .content strong:first-of-type {
         font-family: din-condensed, sans-serif;
         font-style: normal;
         font-weight: 200;
@@ -834,14 +834,14 @@ footer {
         margin-bottom: 5px;
         transition: all .25s linear; }
         @media only screen and (max-width: 768px) {
-          .homePage .ctaHolder .cta .content p:first-of-type {
+          .homePage .ctaHolder .cta .content strong:first-of-type {
             font-size: 18px; } }
-      .homePage .ctaHolder .cta .content p:nth-child(2) {
+      .homePage .ctaHolder .cta .content strong:nth-child(2) {
         font-family: "europa",sans-serif;
         font-size: 38px;
         font-weight: 100; }
         @media only screen and (max-width: 768px) {
-          .homePage .ctaHolder .cta .content p:nth-child(2) {
+          .homePage .ctaHolder .cta .content strong:nth-child(2) {
             font-size: 30px; } }
       .homePage .ctaHolder .cta .content .btn {
         margin: auto;
