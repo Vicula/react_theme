@@ -174,7 +174,8 @@ ul { margin: 0; }
 	background: -o-linear-gradient(bottom, #1a232b, #2d3c4b);
 	background: linear-gradient(to top, #1a232b, #2d3c4b);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	&.hide{
-		transform: translate(0,-150%);
+		transform: translate(0,-100%);
+
 	}
 	& > section{
 		position: relative;
@@ -234,6 +235,8 @@ ul { margin: 0; }
             opacity: 0;
         }
     }
+
+
 
     @keyframes stars-pulse {
         0%,

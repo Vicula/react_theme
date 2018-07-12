@@ -193,7 +193,7 @@ ul {
   /* Chrome 10-25, Safari 5.1-6 */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   .loading-panel.hide {
-    transform: translate(0, -150%); }
+    transform: translate(0, -100%); }
   .loading-panel > section {
     position: relative;
     width: 100%;
