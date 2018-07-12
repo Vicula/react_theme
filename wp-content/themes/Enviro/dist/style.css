@@ -1463,7 +1463,7 @@ footer {
         @media only screen and (max-width: 768px) {
           .aboutHolder #cocktail > div:last-of-type section h1 {
             font-size: 45px; } }
-      .aboutHolder #cocktail > div:last-of-type section p {
+      .aboutHolder #cocktail > div:last-of-type section strong {
         letter-spacing: 1px;
         font-size: 18px;
         text-transform: none;
@@ -1514,7 +1514,7 @@ footer {
       @media only screen and (max-width: 768px) {
         .aboutHolder footer section h1 {
           font-size: 45px; } }
-    .aboutHolder footer section p {
+    .aboutHolder footer section strong {
       letter-spacing: 1px;
       font-size: 18px;
       text-transform: none;
