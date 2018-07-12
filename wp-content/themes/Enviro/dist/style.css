@@ -175,6 +175,10 @@ ul {
     color: #2D3C4B; }
 
 .loading-panel {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -188,6 +192,8 @@ ul {
   background: linear-gradient(to top, #1a232b, #2d3c4b);
   /* Chrome 10-25, Safari 5.1-6 */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .loading-panel.hide {
+    top: -150%; }
   .loading-panel > section {
     position: relative;
     width: 100%;

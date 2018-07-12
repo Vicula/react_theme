@@ -162,6 +162,7 @@ ul { margin: 0; }
 
 
 .loading-panel{
+	@include transition(all 0.2s ease);
 	position: fixed;
 	z-index: 100;
 	top:0;
@@ -172,6 +173,9 @@ ul { margin: 0; }
 	background: -webkit-linear-gradient(bottom, #1a232b, #2d3c4b);
 	background: -o-linear-gradient(bottom, #1a232b, #2d3c4b);
 	background: linear-gradient(to top, #1a232b, #2d3c4b);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	&.hide{
+		top: -150%;
+	}
 	& > section{
 		position: relative;
 		width: 100%;

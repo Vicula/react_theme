@@ -20,7 +20,7 @@ class Home extends React.Component {
     componentDidMount() {
         var that = this;
         window.onbeforeunload = function () { window.scrollTo(0, 0); }
-
+        jQuery('.loading-panel').addClass('hide');
     }
 
     componentDidUpdate() {

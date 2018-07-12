@@ -25349,6 +25349,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
+        jQuery('.loading-panel').addClass('hide');
     }
 
     componentDidUpdate() {}
