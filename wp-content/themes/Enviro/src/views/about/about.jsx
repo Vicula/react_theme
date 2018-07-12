@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import LoadingIcon from '../../../dist/images/loading-icon.gif';
 import AboutHeader from './about-header';
 import AboutSubHeader from './about-subheader';
+import AboutRefreshing from './about-refreshing';
+import AboutCocktail from './about-cocktail';
+import AboutFooter from './about-footer';
 
 class About extends React.Component {
 
@@ -30,7 +33,11 @@ class About extends React.Component {
 
                 <div className="container aboutHolder">
                   <AboutHeader cf={this.props.pageDets.custom_fields}/>
+                  <AboutSubHeader cf={this.props.pageDets.custom_fields}/>
+                  <AboutRefreshing cf={this.props.pageDets.custom_fields}/>
 
+                  <AboutCocktail cf={this.props.pageDets.custom_fields}/>
+                  <AboutFooter cf={this.props.pageDets.custom_fields}/>
                 </div>
 
         );
