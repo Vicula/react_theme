@@ -5,13 +5,13 @@ import Placeholder from '../../../dist/images/placeholder.jpg';
 import NotFound from '../../not-found';
 import * as pageActions from '../../actions/pageActions';
 
-class AboutHeader extends React.Component {
+class AboutSubHeader extends React.Component {
   constructor(props) {
 
       super(props);
       this.goGetImage = this.goGetImage.bind(this);
       this.state = {
-        headerPic:''
+        logo:''
       }
         this.goGetImage = this.goGetImage.bind(this);
   }
@@ -28,24 +28,27 @@ class AboutHeader extends React.Component {
        })
        .then(function (results) {
 
-          that.setState({ headerPic: results['source_url'] });
+          that.setState({ logo: results['source_url'] });
            return results['source_url'];
        }).catch(function (error) {
            console.log('There has been a problem with your fetch operation: ' + error.message);
        });
  }
   componentWillMount() {
-    this.goGetImage(this.props.cf.header_pic[0]);
+    this.goGetImage(this.props.cf.logo[0]);
 
   }
 
     render() {
         return (
-          <header style={{backgroundImage:'url(' + this.state.headerPic + ')'}}>
-        		<h1  dangerouslySetInnerHTML={{__html:this.props.cf.header_text}}></h1>
-        	</header>
+          <section className="subHeader">
+        		<div className="holder">
+        			<div className="logo" style={{backgroundImage:'url(' + this.state.logo + ')'}}></div>
+        			<span dangerouslySetInnerHTML={{__html:this.props.cf.header_content}}></span>
+        		</div>
+        	</section>
         );
     }
 }
 
-export default AboutHeader;
+export default AboutSubHeader;

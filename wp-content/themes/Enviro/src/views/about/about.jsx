@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import LoadingIcon from '../../../dist/images/loading-icon.gif';
-
+import AboutHeader from './about-header';
+import AboutSubHeader from './about-subheader';
 
 class About extends React.Component {
 
@@ -28,13 +29,8 @@ class About extends React.Component {
         return (
 
                 <div className="container aboutHolder">
-                  <HomeHeader cf={this.props.pageDets.custom_fields}/>
-                  <LongCTA cf={this.props.pageDets.custom_fields}/>
-                  <DuoCTA cf={this.props.pageDets.custom_fields}/>
-                  <BlogCTA cf={this.props.pageDets.custom_fields}/>
-                  <DuoCTA cf={this.props.pageDets.custom_fields}/>
-                  <LongCTA cf={this.props.pageDets.custom_fields}/>
-                  <div className="parallaxImg"><img src="http://newcobblehill.wpengine.com/wp-content/uploads/2018/07/Untitled-2.jpg" /></div>
+                  <AboutHeader cf={this.props.pageDets.custom_fields}/>
+
                 </div>
 
         );

@@ -5,6 +5,7 @@ import configureStore from './store/configureStore';
 import { Provider } from 'react-redux'
 import Header from './views/header/header';
 import Home from './views/home/home';
+import About from './views/about/about';
 import Footer from './views/footer/footer';
 import Posts from './posts';
 import Post from './post';
@@ -21,7 +22,8 @@ const store = configureStore();
 
 var component_holder = {
   'Home': Home,
-  'Default': DefaultPage
+  'Default': DefaultPage,
+  'About': About
 }
 
 // Load the Sass file
