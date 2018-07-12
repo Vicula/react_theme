@@ -28592,7 +28592,7 @@ class AboutInfo extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        getThatInfo()
+        this.getThatInfo()
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.cf.fine_text } })
     );

@@ -12,7 +12,7 @@ class AboutInfo extends React.Component {
       super(props);
       this.getThatInfo = this.getThatInfo.bind(this);
       this.state = {
-        
+
       }
         this.getThatInfo = this.getThatInfo.bind(this);
   }
@@ -32,7 +32,7 @@ class AboutInfo extends React.Component {
         return (
           <section className="subSection">
         		<div>
-        			{getThatInfo()}
+        			{this.getThatInfo()}
         		</div>
         		<p dangerouslySetInnerHTML={{__html:this.props.cf.fine_text}}></p>
         	</section>
