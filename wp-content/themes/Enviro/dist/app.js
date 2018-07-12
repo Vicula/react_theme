@@ -28577,7 +28577,7 @@ class AboutInfo extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
   getThatInfo() {
     var length = this.props.cf.specs;
     var info = [];
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i <= length; i++) {
       var crntI = i + 1;
       var srNm = 'specs_' + crntI + '_spec_text';
       info.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('p', { dangerouslySetInnerHTML: { __html: this.props.cf[srNm] } }));
