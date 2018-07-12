@@ -25363,7 +25363,12 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_duoCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__home_blogCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__home_duoCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__home_longCTA__["a" /* default */], { cf: this.props.pageDets.custom_fields }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'parallaxImg' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'http://newcobblehill.wpengine.com/wp-content/uploads/2018/07/navyhillBack.jpg' })
+            )
         );
     }
 }
