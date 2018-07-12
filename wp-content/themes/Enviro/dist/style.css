@@ -185,6 +185,9 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
+  webkit-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
   background: #2d3c4b;
   /* fallback for old browsers */ }
   .loading-panel.hide {
