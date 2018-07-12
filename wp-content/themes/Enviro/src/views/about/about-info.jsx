@@ -23,7 +23,7 @@ class AboutInfo extends React.Component {
       for(var i = 0;i<=length;i++){
         var crntI = i + 1;
         var srNm = 'specs_'+ crntI +'_spec_text'
-          info.push(<p dangerouslySetInnerHTML={{__html:this.props.cf[srNm]}}></p>)
+          info.push(<p key={i} dangerouslySetInnerHTML={{__html:this.props.cf[srNm]}}></p>)
       }
       return info;
     }
