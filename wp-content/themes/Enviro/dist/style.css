@@ -771,13 +771,6 @@ footer {
   border-bottom: 5px solid white;
   border-top: 5px solid white;
   font-size: 0px; }
-  .homePage .ctaHolder:last-of-type .cta1 {
-    float: right;
-    border-left: 2.5px solid white;
-    border-right: 0px; }
-  .homePage .ctaHolder:last-of-type .cta2 {
-    border-left: 0px;
-    border-right: 2.5px solid white; }
   .homePage .ctaHolder .cta {
     font-size: initial;
     width: 50%;

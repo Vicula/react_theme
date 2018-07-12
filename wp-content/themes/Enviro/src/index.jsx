@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux'
-import Header from './header';
+import Header from './views/header/header';
 import Home from './views/home/home';
-import Footer from './footer';
+import Footer from './views/footer/footer';
 import Posts from './posts';
 import Post from './post';
 import Products from './products';

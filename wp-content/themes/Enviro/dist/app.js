@@ -2535,9 +2535,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_configureStore__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_redux__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__header__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_header_header__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_home_home__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__footer__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_footer_footer__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__posts__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__post__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__products__ = __webpack_require__(77);
@@ -2608,7 +2608,7 @@ function furtherConstruction() {
     const App = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'page-inner' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__header__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__views_header_header__["a" /* default */], null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { id: 'content' },
@@ -2628,7 +2628,7 @@ function furtherConstruction() {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Route */], { path: '*', component: __WEBPACK_IMPORTED_MODULE_13__not_found__["a" /* default */] })
             )
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__footer__["a" /* default */], null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__views_footer_footer__["a" /* default */], null)
     );
 
     // Routes
@@ -24636,78 +24636,8 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 72 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_items__ = __webpack_require__(81);
-
-
-
-
-const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: 'container' },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'header',
-        { id: 'masthead', className: 'site-header', role: 'banner' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'nav',
-            { className: 'navbar nav navbar-expand-lg navbar-light' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                { to: EnviroSettings.path },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h1',
-                    { className: 'site-title navH1' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'span',
-                        { className: 'acc' },
-                        'NavyHill'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'menu-primary-menu-container' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__nav_items__["a" /* default */], { menuItems: EnviroSettings.menu })
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                { to: EnviroSettings.path },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-shopping-cart', 'aria-hidden': 'true' })
-            )
-        )
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (Header);
-
-/***/ }),
-/* 73 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-
-
-const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "footer",
-    { id: "colophon", className: "container" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { className: "card-footer bg-transparent border-primary" },
-        "Enviro Theme 2018"
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (Footer);
-
-/***/ }),
+/* 72 */,
+/* 73 */,
 /* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25376,60 +25306,7 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony default export */ __webpack_exports__["a"] = (Home);
 
 /***/ }),
-/* 81 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__dist_images_placeholder_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__not_found__ = __webpack_require__(15);
-// External dependencies
-
-
-
-
-
-class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-
-    renderItems() {
-        return this.props.menuItems.map((item, i) => {
-            var baseurl = item.url;
-            var cutUrl = baseurl.split('.com');
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                { key: i, id: 'menu-item-' + item.ID, className: 'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-                    { to: cutUrl[1] },
-                    item.title
-                )
-            );
-        });
-    }
-
-    renderEmpty() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__not_found__["a" /* default */], null);
-    }
-
-    render() {
-        if (!this.props.menuItems) {
-            return null;
-        }
-
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'ul',
-            { className: 'menu', id: 'menu-primary-menu' },
-            this.props.menuItems.length ? this.renderItems() : this.renderEmpty()
-        );
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (NavItems);
-
-/***/ }),
+/* 81 */,
 /* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28061,6 +27938,139 @@ function getImages(id) {
 function fetchStuff() {
   return {};
 }
+
+/***/ }),
+/* 126 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+const Footer = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  "footer",
+  null,
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "section",
+    { className: "footerHolder" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "\xA9 2017 WSC LLC, All Rights Reserved. Site by ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "a",
+        { href: "http://cobblehilldigital.com", target: "_blank" },
+        "Cobble Hill"
+      )
+    )
+  )
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (Footer);
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nav_items__ = __webpack_require__(128);
+
+
+
+
+const Header = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'container' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'header',
+        { id: 'masthead', className: 'site-header', role: 'banner' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'nav',
+            { className: 'navbar nav navbar-expand-lg navbar-light' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                { to: EnviroSettings.path },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h1',
+                    { className: 'site-title navH1' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'span',
+                        { className: 'acc' },
+                        'NavyHill'
+                    )
+                )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'menu-primary-menu-container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__nav_items__["a" /* default */], { menuItems: EnviroSettings.menu })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                { to: EnviroSettings.path },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-shopping-cart', 'aria-hidden': 'true' })
+            )
+        )
+    )
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (Header);
+
+/***/ }),
+/* 128 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__not_found__ = __webpack_require__(15);
+// External dependencies
+
+
+
+
+
+class NavItems extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+    renderItems() {
+        return this.props.menuItems.map((item, i) => {
+            var baseurl = item.url;
+            var cutUrl = baseurl.split('.com');
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'li',
+                { key: i, id: 'menu-item-' + item.ID, className: 'menu-item menu-item-type-post_type menu-item-object-page menu-item-' + item.ID },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
+                    { to: cutUrl[1] },
+                    item.title
+                )
+            );
+        });
+    }
+
+    renderEmpty() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__not_found__["a" /* default */], null);
+    }
+
+    render() {
+        if (!this.props.menuItems) {
+            return null;
+        }
+
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'ul',
+            { className: 'menu', id: 'menu-primary-menu' },
+            this.props.menuItems.length ? this.renderItems() : this.renderEmpty()
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (NavItems);
 
 /***/ })
 /******/ ]);
