@@ -28147,12 +28147,12 @@ const FooterForm = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createEle
 		),
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			"form",
-			{ action: "//drinknavyhill.us15.list-manage.com/subscribe/post?u=5b3575d2d76b5caa88fe3434f&id=49b3cefd17", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", className: "validate", target: "_blank", novalidate: true },
+			{ action: "//drinknavyhill.us15.list-manage.com/subscribe/post?u=5b3575d2d76b5caa88fe3434f&id=49b3cefd17", method: "post", id: "mc-embedded-subscribe-form", name: "mc-embedded-subscribe-form", className: "validate", target: "_blank", noValidate: true },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "email", placeholder: "Email Address", name: "EMAIL", className: "input email", id: "mce-EMAIL", required: true }),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ style: { position: 'absolute', left: '-5000px' }, "aria-hidden": "true" },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "b_5b3575d2d76b5caa88fe3434f_49b3cefd17", tabindex: "-1", value: "" })
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", name: "b_5b3575d2d76b5caa88fe3434f_49b3cefd17", tabIndex: "-1", value: "" })
 			),
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "submit", name: "subscribe", id: "mc-embedded-subscribe", className: "formBtn" })
 		)
