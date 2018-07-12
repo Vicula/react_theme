@@ -185,13 +185,13 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  webkit-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.75);
+  webkit-box-shadow: 0px 6px 14px 0px rgba(0, 15, 30, 0.45);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(0, 15, 30, 0.45);
+  box-shadow: 0px 6px 14px 0px rgba(0, 15, 30, 0.45);
   background: #2d3c4b;
   /* fallback for old browsers */ }
   .loading-panel.hide {
-    transform: translate(0, -100%); }
+    transform: translate(0, -103%); }
   .loading-panel > section {
     position: relative;
     width: 100%;
