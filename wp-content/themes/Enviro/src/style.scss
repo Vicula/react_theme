@@ -170,9 +170,9 @@ ul { margin: 0; }
 	right: 0;
 	bottom: 0;
 	background: #2d3c4b;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(bottom, #1a232b, #2d3c4b);
-	background: -o-linear-gradient(bottom, #1a232b, #2d3c4b);
-	background: linear-gradient(to top, #1a232b, #2d3c4b);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// background: -webkit-linear-gradient(bottom, #1a232b, #2d3c4b);
+	// background: -o-linear-gradient(bottom, #1a232b, #2d3c4b);
+	// background: linear-gradient(to top, #1a232b, #2d3c4b);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	&.hide{
 		transform: translate(0,-100%);
 
