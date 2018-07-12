@@ -771,6 +771,8 @@ footer {
   border-bottom: 5px solid white;
   border-top: 5px solid white;
   font-size: 0px; }
+  .homePage .ctaHolder:nth-child(5) .cta1 {
+    float: right; }
   .homePage .ctaHolder .cta {
     font-size: initial;
     width: 50%;

@@ -818,6 +818,12 @@ footer{
 		border-top: 5px solid white;
 		font-size: 0px;
 
+		&:nth-child(5){
+			.cta1{
+				float: right;
+			}
+		}
+
 		.cta{
 			font-size: initial;
 			width: 50%;
